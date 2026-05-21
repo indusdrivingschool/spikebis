@@ -1,0 +1,112 @@
+Create a modern premium IT company website for “Alice Solution Co” with a luxury dark blue and black theme, futuristic UI, glassmorphism effects, neon blue highlights, smooth animations, premium typography, and a professional corporate feel.
+
+The website should look like a high-end international technology agency and digital solutions company.
+
+Main colors:
+
+* Deep Black
+* Royal Blue
+* Neon Blue glow
+* Dark Navy gradients
+* White clean typography
+
+Style:
+
+* Premium
+* Futuristic
+* Elegant
+* Corporate
+* Modern SaaS style
+* Smooth scrolling animations
+* Interactive hover effects
+* Glassmorphism cards
+* Professional company branding
+
+Create a stunning hero section with:
+
+* Big premium headline:
+  “Transforming Businesses Through Smart Digital Solutions”
+* Subheading:
+  “We help brands grow with advanced IT services, Shopify solutions, digital marketing, automation, and creative technology.”
+* Two premium buttons:
+  “Get Started”
+  “Book Consultation”
+* Background with abstract technology graphics, glowing elements, digital waves, AI tech visuals, and modern company banner design.
+
+Add premium sections:
+
+1. About Company
+   Introduce Alice Solution Co as a modern digital transformation company providing worldwide IT and marketing solutions.
+
+2. Services Section
+   Show premium animated service cards for:
+
+* Shopify Store Development
+* Shopify Store Management
+* Facebook & Instagram Ads
+* TikTok Ads
+* Google Ads
+* Website Development
+* Ecommerce Solutions
+* Graphic Design
+* Video Editing
+* Branding
+* SEO Optimization
+* Social Media Marketing
+* Digital Marketing
+* UI/UX Design
+* AI Automation
+* Freelancing Services
+* Fiverr Business Solutions
+* Website Maintenance
+* Business Growth Strategy
+
+3. Why Choose Us
+   Add premium stats:
+
+* 500+ Projects
+* 200+ Happy Clients
+* 24/7 Support
+* Worldwide Services
+* Fast Delivery
+* Expert Team
+
+4. Portfolio Section
+   Show modern project showcase cards with hover animations and glowing effects.
+
+5. Testimonials
+   Add premium client reviews with modern cards and profile images.
+
+6. Pricing Plans
+   Create modern premium pricing tables for:
+
+* Starter
+* Professional
+* Enterprise
+
+7. Contact Section
+   Modern contact form with map, WhatsApp button, social icons, and glowing effects.
+
+8. Footer
+   Premium dark footer with quick links, services, company info, and social media icons.
+
+Extra Features:
+
+* Fully responsive mobile-friendly design
+* Ultra-fast loading
+* Premium animations
+* SEO optimized structure
+* Modern dashboard UI feel
+* Premium fonts
+* Clean spacing
+* Cyber-tech visual style
+* Professional company identity
+* Add futuristic AI-inspired graphics
+* Add floating blue light effects
+* Add premium navbar with transparent effect
+* Add modern loading animation
+
+Website vibe should feel like:
+Apple + Tesla + Modern SaaS + Cyberpunk + Premium IT Agency
+
+The final design must look expensive, professional, trustworthy, and internationally premium.

@@ -1,44 +1,48 @@
-# [Project name]
+# Alice Solution Co
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+A premium, futuristic single-page website for Alice Solution Co — a modern international IT company and digital solutions agency.
 
 ## Run & Operate
 
-- `pnpm --filter @workspace/api-server run dev` — run the API server (port 5000)
+- `pnpm --filter @workspace/alice-solution run dev` — run the website (port auto-assigned)
 - `pnpm run typecheck` — full typecheck across all packages
 - `pnpm run build` — typecheck + build all packages
-- `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from the OpenAPI spec
-- `pnpm --filter @workspace/db run push` — push DB schema changes (dev only)
-- Required env: `DATABASE_URL` — Postgres connection string
 
 ## Stack
 
 - pnpm workspaces, Node.js 24, TypeScript 5.9
-- API: Express 5
-- DB: PostgreSQL + Drizzle ORM
-- Validation: Zod (`zod/v4`), `drizzle-zod`
-- API codegen: Orval (from OpenAPI spec)
-- Build: esbuild (CJS bundle)
+- Frontend: React + Vite, Tailwind CSS, Framer Motion
+- UI: shadcn/ui components, Lucide React icons
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `artifacts/alice-solution/src/pages/Home.tsx` — entire single-page website (all 10 sections)
+- `artifacts/alice-solution/src/index.css` — dark theme CSS variables + global styles
+- `artifacts/alice-solution/src/App.tsx` — router (renders Home)
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+- Single-page design with smooth anchor navigation (no multi-page routing)
+- Framer Motion for all scroll-triggered animations, stagger effects, and hover states
+- CSS custom properties for the dark navy/neon blue theme — defined in `:root` and `.dark`
+- Glassmorphism card pattern: `backdrop-filter: blur(12px)` + semi-transparent dark navy bg + neon blue border glow
+- Default dark mode enforced via `class="dark"` on `<html>` in index.html
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+A premium IT company website with: sticky glassmorphism navbar, animated hero with tech visuals, about + stats section with animated counters, 19-service grid with glassmorphism cards, portfolio showcase, testimonials, 3-tier pricing, contact form with WhatsApp/social links, and premium footer. Includes a 1.5s branded intro loading animation.
 
 ## User preferences
 
-_Populate as you build — explicit user instructions worth remembering across sessions._
+- Dark luxury theme: deep black (#050a14), royal blue (#1a56db), neon blue (#3b82f6) glow
+- Premium futuristic corporate feel — Apple + Tesla + Cyberpunk aesthetic
+- Glassmorphism effects throughout
+- Space Grotesk + Inter fonts
 
 ## Gotchas
 
-_Populate as you build — sharp edges, "always run X before Y" rules._
+- The intro loading screen runs for 1.5s on every page load — this is intentional branding
+- Google Fonts import must stay as the VERY FIRST line of index.css
 
 ## Pointers
 
