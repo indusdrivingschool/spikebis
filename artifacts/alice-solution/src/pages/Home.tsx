@@ -835,22 +835,22 @@ export default function Home() {
           </div>
         </footer>
 
-        {/* ── FLOATING BUTTONS (both right side, stacked) ── */}
-        <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" data-testid="button-whatsapp-float"
-          className="fixed bottom-24 right-6 z-50 w-16 h-16 rounded-full flex items-center justify-center text-white transition-all duration-200 hover:scale-110 active:scale-95"
-          style={{ background: "linear-gradient(145deg,#25d366,#1ebe5d,#128c7e)", boxShadow: "0 4px 30px rgba(37,211,102,0.65), 0 0 0 3px rgba(37,211,102,0.2)" }}>
-          {/* Official WhatsApp SVG logo */}
-          <svg viewBox="0 0 32 32" className="w-9 h-9" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fillRule="evenodd" clipRule="evenodd"
-              d="M16 2C8.268 2 2 8.268 2 16c0 2.428.638 4.71 1.756 6.686L2 30l7.528-1.726A13.94 13.94 0 0016 30c7.732 0 14-6.268 14-14S23.732 2 16 2z"
-              fill="white" fillOpacity="0.15" />
-            <path fillRule="evenodd" clipRule="evenodd"
-              d="M16 4.5C9.596 4.5 4.5 9.596 4.5 16c0 2.21.635 4.273 1.733 6.015l.224.358-1.02 3.73 3.84-.98.346.206A11.45 11.45 0 0016 27.5c6.404 0 11.5-5.096 11.5-11.5S22.404 4.5 16 4.5z"
-              fill="white" />
-            <path fillRule="evenodd" clipRule="evenodd"
-              d="M12.314 10.5c-.32-.715-.656-.73-.96-.743-.249-.011-.533-.01-.817-.01-.284 0-.747.107-1.138.534-.39.427-1.494 1.46-1.494 3.56 0 2.1 1.53 4.132 1.743 4.418.213.285 2.95 4.723 7.282 6.428 3.602 1.42 4.334 1.138 5.115 1.067.78-.07 2.524-1.032 2.88-2.03.356-.997.356-1.852.249-2.03-.107-.178-.391-.285-.817-.499-.427-.214-2.524-1.246-2.916-1.388-.391-.143-.676-.214-.96.214-.284.427-1.101 1.388-1.35 1.674-.249.285-.498.32-.925.107-.427-.214-1.802-.664-3.435-2.12-1.27-1.132-2.128-2.531-2.377-2.958-.249-.427-.027-.658.187-.87.192-.19.427-.498.64-.747.214-.249.285-.427.427-.712.143-.284.072-.534-.036-.748-.107-.213-.94-2.328-1.319-3.147z"
-              fill="#25d366" />
+        {/* ── FLOATING WHATSAPP BUTTON ── */}
+        <a
+          href={WHATSAPP_LINK}
+          target="_blank"
+          rel="noopener noreferrer"
+          data-testid="button-whatsapp-float"
+          className="fixed bottom-8 right-6 z-50 flex items-center gap-3 pl-4 pr-5 h-14 rounded-full text-white font-semibold text-sm transition-transform duration-200 hover:scale-105 active:scale-95 select-none"
+          style={{ background: "linear-gradient(135deg,#25d366,#1aaf55)", boxShadow: "0 6px 32px rgba(37,211,102,0.55), 0 2px 8px rgba(0,0,0,0.3)" }}
+        >
+          {/* Pulsing dot */}
+          <span className="absolute top-2 right-2 w-2.5 h-2.5 rounded-full bg-white/60 animate-ping" />
+          {/* WhatsApp icon — white on transparent (green bg) */}
+          <svg viewBox="0 0 24 24" className="w-7 h-7 shrink-0" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.974-1.424A9.953 9.953 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.946 7.946 0 01-4.073-1.117l-.292-.174-3.03.869.895-2.965-.19-.303A7.96 7.96 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8zm4.406-5.843c-.242-.121-1.432-.707-1.654-.787-.222-.081-.383-.121-.545.121-.162.242-.627.787-.769.949-.141.162-.283.182-.524.061-.242-.121-1.02-.376-1.944-1.2-.718-.64-1.203-1.43-1.344-1.672-.141-.242-.015-.373.106-.493.109-.108.242-.283.363-.424.121-.141.162-.242.242-.404.081-.162.04-.303-.02-.424-.06-.121-.545-1.314-.747-1.799-.197-.472-.397-.408-.545-.415l-.464-.008c-.162 0-.424.06-.646.303-.222.242-.848.829-.848 2.022s.868 2.345.988 2.507c.121.162 1.708 2.607 4.138 3.654.578.25 1.029.399 1.38.511.58.185 1.108.159 1.525.096.465-.07 1.432-.585 1.634-1.15.202-.565.202-1.049.141-1.15-.06-.1-.222-.161-.464-.283z"/>
           </svg>
+          <span>WhatsApp Us</span>
         </a>
 
         <AnimatePresence>
