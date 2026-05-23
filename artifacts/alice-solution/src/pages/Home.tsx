@@ -837,9 +837,20 @@ export default function Home() {
 
         {/* ── FLOATING BUTTONS (both right side, stacked) ── */}
         <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" data-testid="button-whatsapp-float"
-          className="fixed bottom-24 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center text-white transition-all hover:scale-110 active:scale-95"
-          style={{ background: "linear-gradient(135deg,#25d366,#128c7e)", boxShadow: "0 0 24px rgba(37,211,102,0.55)" }}>
-          <MessageCircle className="w-6 h-6" />
+          className="fixed bottom-24 right-6 z-50 w-16 h-16 rounded-full flex items-center justify-center text-white transition-all duration-200 hover:scale-110 active:scale-95"
+          style={{ background: "linear-gradient(145deg,#25d366,#1ebe5d,#128c7e)", boxShadow: "0 4px 30px rgba(37,211,102,0.65), 0 0 0 3px rgba(37,211,102,0.2)" }}>
+          {/* Official WhatsApp SVG logo */}
+          <svg viewBox="0 0 32 32" className="w-9 h-9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fillRule="evenodd" clipRule="evenodd"
+              d="M16 2C8.268 2 2 8.268 2 16c0 2.428.638 4.71 1.756 6.686L2 30l7.528-1.726A13.94 13.94 0 0016 30c7.732 0 14-6.268 14-14S23.732 2 16 2z"
+              fill="white" fillOpacity="0.15" />
+            <path fillRule="evenodd" clipRule="evenodd"
+              d="M16 4.5C9.596 4.5 4.5 9.596 4.5 16c0 2.21.635 4.273 1.733 6.015l.224.358-1.02 3.73 3.84-.98.346.206A11.45 11.45 0 0016 27.5c6.404 0 11.5-5.096 11.5-11.5S22.404 4.5 16 4.5z"
+              fill="white" />
+            <path fillRule="evenodd" clipRule="evenodd"
+              d="M12.314 10.5c-.32-.715-.656-.73-.96-.743-.249-.011-.533-.01-.817-.01-.284 0-.747.107-1.138.534-.39.427-1.494 1.46-1.494 3.56 0 2.1 1.53 4.132 1.743 4.418.213.285 2.95 4.723 7.282 6.428 3.602 1.42 4.334 1.138 5.115 1.067.78-.07 2.524-1.032 2.88-2.03.356-.997.356-1.852.249-2.03-.107-.178-.391-.285-.817-.499-.427-.214-2.524-1.246-2.916-1.388-.391-.143-.676-.214-.96.214-.284.427-1.101 1.388-1.35 1.674-.249.285-.498.32-.925.107-.427-.214-1.802-.664-3.435-2.12-1.27-1.132-2.128-2.531-2.377-2.958-.249-.427-.027-.658.187-.87.192-.19.427-.498.64-.747.214-.249.285-.427.427-.712.143-.284.072-.534-.036-.748-.107-.213-.94-2.328-1.319-3.147z"
+              fill="#25d366" />
+          </svg>
         </a>
 
         <AnimatePresence>
