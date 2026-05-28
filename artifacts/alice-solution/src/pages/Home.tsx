@@ -204,6 +204,74 @@ export default function Home() {
             className="absolute bottom-[20%] right-[15%] w-[400px] h-[400px] bg-blue-600/15 rounded-full blur-[110px]" />
         </div>
 
+        {/* ── PRO ANNOUNCEMENT BANNER ── */}
+        <div className="relative z-50 overflow-hidden" style={{ background: "linear-gradient(90deg,#0f1f5c,#1a56db,#2563eb,#1a56db,#0f1f5c)" }}>
+          {/* Shimmer overlay */}
+          <motion.div
+            className="absolute inset-0 pointer-events-none"
+            style={{ background: "linear-gradient(90deg,transparent 0%,rgba(255,255,255,0.07) 50%,transparent 100%)", width: "200%" }}
+            animate={{ x: ["-100%", "0%"] }}
+            transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+          />
+          <div className="flex items-center justify-between px-4 py-2 gap-4">
+            {/* Left badge */}
+            <div className="hidden sm:flex items-center gap-2 shrink-0">
+              <span className="flex items-center gap-1.5 bg-white/15 border border-white/20 text-white text-[11px] font-bold px-3 py-1 rounded-full tracking-wide uppercase">
+                <Sparkles className="w-3 h-3 text-yellow-300" /> Global Agency
+              </span>
+            </div>
+
+            {/* Scrolling marquee */}
+            <div className="flex-1 overflow-hidden">
+              <motion.div
+                className="flex items-center gap-8 whitespace-nowrap w-max"
+                animate={{ x: ["0%", "-50%"] }}
+                transition={{ duration: 28, repeat: Infinity, ease: "linear" }}
+              >
+                {[
+                  { icon: <Globe className="w-3.5 h-3.5" />, text: "Serving Clients in 30+ Countries" },
+                  { icon: <Zap className="w-3.5 h-3.5 text-yellow-300" />, text: "Shopify Development" },
+                  { icon: <Megaphone className="w-3.5 h-3.5" />, text: "Facebook & Instagram Ads" },
+                  { icon: <Search className="w-3.5 h-3.5" />, text: "Google Ads Management" },
+                  { icon: <Code className="w-3.5 h-3.5" />, text: "Website Development" },
+                  { icon: <Bot className="w-3.5 h-3.5 text-cyan-300" />, text: "AI Automation" },
+                  { icon: <TrendingUp className="w-3.5 h-3.5" />, text: "SEO & Digital Marketing" },
+                  { icon: <Palette className="w-3.5 h-3.5 text-pink-300" />, text: "Branding & Graphic Design" },
+                  { icon: <Star className="w-3.5 h-3.5 text-yellow-300" />, text: "18+ Years of Excellence" },
+                  { icon: <Shield className="w-3.5 h-3.5 text-green-300" />, text: "100% Satisfaction Guaranteed" },
+                  // duplicate for seamless loop
+                  { icon: <Globe className="w-3.5 h-3.5" />, text: "Serving Clients in 30+ Countries" },
+                  { icon: <Zap className="w-3.5 h-3.5 text-yellow-300" />, text: "Shopify Development" },
+                  { icon: <Megaphone className="w-3.5 h-3.5" />, text: "Facebook & Instagram Ads" },
+                  { icon: <Search className="w-3.5 h-3.5" />, text: "Google Ads Management" },
+                  { icon: <Code className="w-3.5 h-3.5" />, text: "Website Development" },
+                  { icon: <Bot className="w-3.5 h-3.5 text-cyan-300" />, text: "AI Automation" },
+                  { icon: <TrendingUp className="w-3.5 h-3.5" />, text: "SEO & Digital Marketing" },
+                  { icon: <Palette className="w-3.5 h-3.5 text-pink-300" />, text: "Branding & Graphic Design" },
+                  { icon: <Star className="w-3.5 h-3.5 text-yellow-300" />, text: "18+ Years of Excellence" },
+                  { icon: <Shield className="w-3.5 h-3.5 text-green-300" />, text: "100% Satisfaction Guaranteed" },
+                ].map((item, i) => (
+                  <span key={i} className="flex items-center gap-2 text-white/90 text-xs font-medium">
+                    {item.icon}
+                    {item.text}
+                    <span className="text-white/30 ml-4">◆</span>
+                  </span>
+                ))}
+              </motion.div>
+            </div>
+
+            {/* Right CTA */}
+            <a
+              href={WHATSAPP_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:flex items-center gap-1.5 bg-white text-[#1a56db] text-[11px] font-black px-4 py-1.5 rounded-full hover:bg-blue-50 transition-colors shrink-0 tracking-wide uppercase"
+            >
+              <Rocket className="w-3 h-3" /> Get Free Quote
+            </a>
+          </div>
+        </div>
+
         {/* ── TOP BAR ── */}
         <div className="relative z-50 bg-[#030712] border-b border-white/[0.06] py-2 px-4">
           <div className="container mx-auto flex items-center justify-between gap-4 flex-wrap">
