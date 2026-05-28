@@ -118,6 +118,187 @@ const pricing = [
   { name: "Enterprise", price: "Custom", period: "", desc: "Tailored solutions for global enterprises.", features: ["Full-Scale AI Automation", "Global Ad Campaigns (Google, Meta, TikTok)", "Dedicated Account Manager", "Custom Ecommerce Platform", "On-site Consulting Available", "White-label Solutions"], recommended: false },
 ];
 
+// Cloudflare-style poster visual per service category
+function ServicePosterVisual({ tag, accent }: { tag: string; accent: string }) {
+  const c = accent;
+  switch (tag) {
+    case "E-Commerce":
+      return (
+        <svg viewBox="0 0 220 120" className="absolute inset-0 w-full h-full" fill="none">
+          {/* Shelf */}
+          <rect x="20" y="85" width="180" height="4" rx="2" fill={c} opacity=".18"/>
+          {/* Products */}
+          <rect x="30" y="55" width="32" height="30" rx="4" fill={c} opacity=".25"/>
+          <rect x="72" y="45" width="32" height="40" rx="4" fill={c} opacity=".35"/>
+          <rect x="114" y="60" width="32" height="25" rx="4" fill={c} opacity=".22"/>
+          <rect x="156" y="50" width="32" height="35" rx="4" fill={c} opacity=".3"/>
+          {/* Cart icon */}
+          <circle cx="165" cy="28" r="18" fill={c} opacity=".12" stroke={c} strokeWidth="1.5" strokeOpacity=".4"/>
+          <path d="M156 22h3l4 10h10l2-6h-13" stroke={c} strokeWidth="1.5" strokeOpacity=".9" strokeLinecap="round" strokeLinejoin="round"/>
+          <circle cx="163" cy="34" r="1.5" fill={c} opacity=".9"/>
+          <circle cx="169" cy="34" r="1.5" fill={c} opacity=".9"/>
+          {/* Price tag */}
+          <rect x="44" y="38" width="28" height="12" rx="6" fill={c} opacity=".2"/>
+          <text x="58" y="47.5" textAnchor="middle" fontSize="7" fill={c} opacity=".8" fontWeight="bold">$49</text>
+        </svg>
+      );
+    case "Paid Ads":
+      return (
+        <svg viewBox="0 0 220 120" className="absolute inset-0 w-full h-full" fill="none">
+          {/* Bar chart */}
+          <rect x="25" y="75" width="22" height="30" rx="3" fill={c} opacity=".2"/>
+          <rect x="55" y="55" width="22" height="50" rx="3" fill={c} opacity=".3"/>
+          <rect x="85" y="40" width="22" height="65" rx="3" fill={c} opacity=".4"/>
+          <rect x="115" y="30" width="22" height="75" rx="3" fill={c} opacity=".5"/>
+          <rect x="145" y="20" width="22" height="85" rx="3" fill={c} opacity=".6"/>
+          {/* Trend line */}
+          <polyline points="36,74 66,54 96,39 126,29 156,19" stroke={c} strokeWidth="2" strokeOpacity=".8" strokeLinecap="round"/>
+          {/* Targeting circle */}
+          <circle cx="185" cy="35" r="20" stroke={c} strokeWidth="1.5" strokeOpacity=".35" strokeDasharray="4 3"/>
+          <circle cx="185" cy="35" r="11" stroke={c} strokeWidth="1.5" strokeOpacity=".5"/>
+          <circle cx="185" cy="35" r="4" fill={c} opacity=".7"/>
+          <line x1="185" y1="14" x2="185" y2="56" stroke={c} strokeWidth="1" strokeOpacity=".4"/>
+          <line x1="164" y1="35" x2="206" y2="35" stroke={c} strokeWidth="1" strokeOpacity=".4"/>
+        </svg>
+      );
+    case "Development":
+      return (
+        <svg viewBox="0 0 220 120" className="absolute inset-0 w-full h-full" fill="none">
+          {/* Browser chrome */}
+          <rect x="20" y="15" width="180" height="95" rx="8" stroke={c} strokeWidth="1.5" strokeOpacity=".3" fill={c} fillOpacity=".04"/>
+          <rect x="20" y="15" width="180" height="22" rx="8" fill={c} fillOpacity=".1"/>
+          <circle cx="35" cy="26" r="4" fill={c} opacity=".4"/>
+          <circle cx="50" cy="26" r="4" fill={c} opacity=".3"/>
+          <circle cx="65" cy="26" r="4" fill={c} opacity=".2"/>
+          <rect x="80" y="21" width="100" height="10" rx="5" fill={c} opacity=".12"/>
+          {/* Code lines */}
+          <rect x="32" y="48" width="40" height="5" rx="2" fill={c} opacity=".5"/>
+          <rect x="45" y="58" width="60" height="5" rx="2" fill={c} opacity=".35"/>
+          <rect x="45" y="68" width="50" height="5" rx="2" fill={c} opacity=".35"/>
+          <rect x="45" y="78" width="70" height="5" rx="2" fill={c} opacity=".3"/>
+          <rect x="32" y="88" width="35" height="5" rx="2" fill={c} opacity=".5"/>
+          {/* Bracket symbols */}
+          <text x="140" y="75" fontSize="32" fill={c} opacity=".12" fontFamily="monospace">{ }</text>
+        </svg>
+      );
+    case "Creative":
+      return (
+        <svg viewBox="0 0 220 120" className="absolute inset-0 w-full h-full" fill="none">
+          {/* Color palette circles */}
+          <circle cx="60" cy="55" r="30" fill={c} opacity=".18"/>
+          <circle cx="90" cy="55" r="30" fill="#ec4899" opacity=".13"/>
+          <circle cx="75" cy="75" r="30" fill="#f59e0b" opacity=".13"/>
+          {/* Design shapes */}
+          <rect x="130" y="20" width="50" height="50" rx="8" stroke={c} strokeWidth="1.5" strokeOpacity=".4" fill={c} fillOpacity=".06" transform="rotate(12 155 45)"/>
+          <polygon points="150,80 175,40 200,80" stroke={c} strokeWidth="1.5" strokeOpacity=".35" fill={c} fillOpacity=".06"/>
+          {/* Brush */}
+          <path d="M55 25 L75 55" stroke={c} strokeWidth="3" strokeOpacity=".6" strokeLinecap="round"/>
+          <circle cx="55" cy="22" r="5" fill={c} opacity=".7"/>
+        </svg>
+      );
+    case "Marketing":
+      return (
+        <svg viewBox="0 0 220 120" className="absolute inset-0 w-full h-full" fill="none">
+          {/* Growth curve */}
+          <path d="M20 95 Q60 80 90 60 T160 25 T200 15" stroke={c} strokeWidth="2.5" strokeOpacity=".7" strokeLinecap="round" fill="none"/>
+          <path d="M20 95 Q60 80 90 60 T160 25 T200 15 V110 H20Z" fill={c} fillOpacity=".07"/>
+          {/* Network nodes */}
+          <circle cx="55" cy="82" r="5" fill={c} opacity=".6"/>
+          <circle cx="100" cy="58" r="6" fill={c} opacity=".7"/>
+          <circle cx="150" cy="32" r="5" fill={c} opacity=".6"/>
+          <circle cx="190" cy="20" r="8" fill={c} opacity=".8"/>
+          {/* Node lines */}
+          <line x1="55" y1="82" x2="100" y2="58" stroke={c} strokeWidth="1" strokeOpacity=".3"/>
+          <line x1="100" y1="58" x2="150" y2="32" stroke={c} strokeWidth="1" strokeOpacity=".3"/>
+          <line x1="150" y1="32" x2="190" y2="20" stroke={c} strokeWidth="1" strokeOpacity=".3"/>
+          {/* Arrow up */}
+          <path d="M195 8 L195 20 M190 13 L195 8 L200 13" stroke={c} strokeWidth="2" strokeOpacity=".8" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      );
+    case "Design":
+      return (
+        <svg viewBox="0 0 220 120" className="absolute inset-0 w-full h-full" fill="none">
+          {/* Phone wireframe */}
+          <rect x="30" y="15" width="65" height="95" rx="10" stroke={c} strokeWidth="1.5" strokeOpacity=".4" fill={c} fillOpacity=".05"/>
+          <rect x="37" y="28" width="51" height="55" rx="4" fill={c} opacity=".1"/>
+          <rect x="37" y="28" width="51" height="12" rx="4" fill={c} opacity=".2"/>
+          <rect x="37" y="88" width="22" height="6" rx="3" fill={c} opacity=".25"/>
+          <rect x="65" y="88" width="22" height="6" rx="3" fill={c} opacity=".15"/>
+          <circle cx="62" cy="22" r="3" fill={c} opacity=".3"/>
+          {/* Desktop wireframe */}
+          <rect x="115" y="20" width="90" height="62" rx="6" stroke={c} strokeWidth="1.5" strokeOpacity=".35" fill={c} fillOpacity=".04"/>
+          <rect x="115" y="20" width="90" height="14" rx="6" fill={c} fillOpacity=".12"/>
+          <rect x="122" y="42" width="35" height="5" rx="2" fill={c} opacity=".2"/>
+          <rect x="122" y="52" width="55" height="5" rx="2" fill={c} opacity=".15"/>
+          <rect x="122" y="62" width="45" height="5" rx="2" fill={c} opacity=".15"/>
+          <rect x="150" y="84" width="20" height="8" rx="2" fill={c} opacity=".18"/>
+          <rect x="145" y="92" width="30" height="4" rx="2" fill={c} opacity=".12"/>
+          {/* Cursor */}
+          <path d="M185 50 L185 65 L189 60 L193 68 L195 67 L191 59 L196 59Z" fill={c} opacity=".7"/>
+        </svg>
+      );
+    case "Technology":
+      return (
+        <svg viewBox="0 0 220 120" className="absolute inset-0 w-full h-full" fill="none">
+          {/* Neural network */}
+          {[[40,30],[40,60],[40,90],[100,20],[100,50],[100,80],[100,105],[165,40],[165,75]].map(([cx,cy],i)=>(
+            <circle key={i} cx={cx} cy={cy} r="5" fill={c} opacity={i < 3 ? ".5" : i < 7 ? ".7" : ".9"}/>
+          ))}
+          {/* Connections layer 1-2 */}
+          {[[40,30,100,20],[40,30,100,50],[40,60,100,20],[40,60,100,50],[40,60,100,80],[40,90,100,50],[40,90,100,80],[40,90,100,105]].map(([x1,y1,x2,y2],i)=>(
+            <line key={i} x1={x1} y1={y1} x2={x2} y2={y2} stroke={c} strokeWidth="0.8" strokeOpacity=".2"/>
+          ))}
+          {/* Connections layer 2-3 */}
+          {[[100,20,165,40],[100,50,165,40],[100,50,165,75],[100,80,165,75],[100,105,165,75]].map(([x1,y1,x2,y2],i)=>(
+            <line key={i} x1={x1} y1={y1} x2={x2} y2={y2} stroke={c} strokeWidth="0.8" strokeOpacity=".25"/>
+          ))}
+          {/* AI brain circle */}
+          <circle cx="165" cy="57" r="28" stroke={c} strokeWidth="1.5" strokeOpacity=".25" strokeDasharray="5 3"/>
+          <circle cx="165" cy="57" r="18" stroke={c} strokeWidth="1" strokeOpacity=".15"/>
+        </svg>
+      );
+    case "Strategy":
+      return (
+        <svg viewBox="0 0 220 120" className="absolute inset-0 w-full h-full" fill="none">
+          {/* Globe grid */}
+          <ellipse cx="110" cy="60" rx="45" ry="45" stroke={c} strokeWidth="1.2" strokeOpacity=".3"/>
+          <ellipse cx="110" cy="60" rx="20" ry="45" stroke={c} strokeWidth="1" strokeOpacity=".2"/>
+          <ellipse cx="110" cy="60" rx="45" ry="20" stroke={c} strokeWidth="1" strokeOpacity=".2"/>
+          <line x1="65" y1="60" x2="155" y2="60" stroke={c} strokeWidth="1" strokeOpacity=".2"/>
+          <line x1="110" y1="15" x2="110" y2="105" stroke={c} strokeWidth="1" strokeOpacity=".2"/>
+          {/* Location pins */}
+          <circle cx="85" cy="45" r="4" fill={c} opacity=".8"/>
+          <circle cx="135" cy="55" r="4" fill={c} opacity=".7"/>
+          <circle cx="115" cy="80" r="3" fill={c} opacity=".6"/>
+          {/* Connection arcs */}
+          <path d="M85 45 Q110 30 135 55" stroke={c} strokeWidth="1.5" strokeOpacity=".5" strokeDasharray="4 2" fill="none"/>
+          <path d="M135 55 Q125 70 115 80" stroke={c} strokeWidth="1.5" strokeOpacity=".4" strokeDasharray="4 2" fill="none"/>
+        </svg>
+      );
+    default: // Services
+      return (
+        <svg viewBox="0 0 220 120" className="absolute inset-0 w-full h-full" fill="none">
+          {/* Task cards */}
+          <rect x="20" y="20" width="80" height="45" rx="6" stroke={c} strokeWidth="1.5" strokeOpacity=".35" fill={c} fillOpacity=".06"/>
+          <rect x="27" y="30" width="45" height="5" rx="2" fill={c} opacity=".4"/>
+          <rect x="27" y="40" width="60" height="4" rx="2" fill={c} opacity=".25"/>
+          <rect x="27" y="50" width="35" height="4" rx="2" fill={c} opacity=".2"/>
+          <rect x="115" y="35" width="80" height="45" rx="6" stroke={c} strokeWidth="1.5" strokeOpacity=".35" fill={c} fillOpacity=".06"/>
+          <rect x="122" y="45" width="45" height="5" rx="2" fill={c} opacity=".4"/>
+          <rect x="122" y="55" width="60" height="4" rx="2" fill={c} opacity=".25"/>
+          <rect x="122" y="65" width="35" height="4" rx="2" fill={c} opacity=".2"/>
+          {/* Check marks */}
+          <path d="M75 42 L78 46 L85 38" stroke={c} strokeWidth="2" strokeOpacity=".7" strokeLinecap="round" strokeLinejoin="round"/>
+          {/* Arrow connecting */}
+          <path d="M102 42 L113 42" stroke={c} strokeWidth="1.5" strokeOpacity=".4" strokeLinecap="round"/>
+          <path d="M110 39 L113 42 L110 45" stroke={c} strokeWidth="1.5" strokeOpacity=".4" strokeLinecap="round" strokeLinejoin="round"/>
+          {/* Stars */}
+          <text x="30" y="95" fontSize="14" fill={c} opacity=".5">★ ★ ★ ★ ★</text>
+        </svg>
+      );
+  }
+}
+
 // Ticker component
 function ServicesTicker() {
   const items = [...TICKER_ITEMS, ...TICKER_ITEMS];
@@ -514,39 +695,43 @@ export default function Home() {
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
               {services.map((s, i) => (
                 <motion.div key={i} variants={fadeInUp}
-                  className="group relative overflow-hidden rounded-2xl border border-white/[0.07] bg-[#080e1c] transition-all duration-300 hover:-translate-y-2 hover:border-white/15 cursor-pointer"
-                  style={{ "--accent": s.accent } as React.CSSProperties}
-                  onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.boxShadow = `0 12px 40px ${s.accent}22`; }}
+                  className="group relative overflow-hidden rounded-2xl border border-white/[0.08] bg-[#06080f] transition-all duration-300 hover:-translate-y-1 cursor-pointer"
+                  onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.boxShadow = `0 16px 48px ${s.accent}28, 0 0 0 1px ${s.accent}22`; }}
                   onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.boxShadow = "none"; }}>
 
-                  {/* Card visual header banner */}
-                  <div className={`relative h-24 w-full bg-gradient-to-br ${s.color} overflow-hidden`}>
-                    {/* Dot grid */}
-                    <div className="absolute inset-0 opacity-25" style={{ backgroundImage: "radial-gradient(circle at 1.5px 1.5px,rgba(255,255,255,0.2) 1.5px,transparent 0)", backgroundSize: "18px 18px" }} />
-                    {/* Large watermark icon */}
-                    <div className="absolute -right-3 -bottom-4 opacity-[0.12] scale-[2.8] origin-bottom-right text-white">
-                      {s.icon}
-                    </div>
-                    {/* Tag badge */}
-                    <div className="absolute top-3 left-3">
-                      <span className={`text-[10px] font-bold uppercase tracking-[0.12em] px-2.5 py-1 rounded-full border ${s.tagColor}`}>
+                  {/* ── POSTER HEADER ── */}
+                  <div className={`relative h-44 w-full bg-gradient-to-br ${s.color} overflow-hidden`}>
+                    {/* Subtle mesh */}
+                    <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "radial-gradient(circle at 1.5px 1.5px,rgba(255,255,255,0.18) 1px,transparent 0)", backgroundSize: "20px 20px" }} />
+                    {/* Service-specific illustration */}
+                    <ServicePosterVisual tag={s.tag} accent={s.accent} />
+                    {/* Category badge */}
+                    <div className="absolute top-3 left-3 z-10">
+                      <span className={`text-[10px] font-bold uppercase tracking-[0.12em] px-2.5 py-1 rounded-full border backdrop-blur-sm ${s.tagColor}`}>
                         {s.tag}
                       </span>
                     </div>
-                    {/* Bottom fade */}
-                    <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-[#080e1c] to-transparent" />
+                    {/* Service icon circle */}
+                    <div className="absolute top-3 right-3 z-10 w-9 h-9 rounded-xl flex items-center justify-center border border-white/10"
+                      style={{ background: `${s.accent}22`, color: s.accent }}>
+                      <span className="scale-75">{s.icon}</span>
+                    </div>
+                    {/* Title overlay at bottom */}
+                    <div className="absolute bottom-0 left-0 right-0 px-4 pb-3 pt-8 bg-gradient-to-t from-[#06080f] via-[#06080f]/80 to-transparent z-10">
+                      <h3 className="text-[15px] font-black text-white leading-snug">{s.title}</h3>
+                    </div>
                   </div>
 
-                  <div className="px-6 pb-6 pt-4">
-                    {/* Icon circle overlapping header */}
-                    <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 -mt-10 relative z-10 border border-white/10 transition-transform duration-300 group-hover:scale-110"
-                      style={{ background: `${s.accent}22`, color: s.accent }}>
-                      {s.icon}
-                    </div>
-                    <h3 className="text-base font-bold text-white mb-2 leading-snug">{s.title}</h3>
-                    <p className="text-slate-400 text-sm leading-relaxed">{s.desc}</p>
-                    <div className="mt-4 flex items-center gap-1 text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ color: s.accent }}>
-                      Get Started <ArrowRight className="w-3 h-3" />
+                  {/* ── CARD BODY ── */}
+                  <div className="px-4 pt-3 pb-4">
+                    <p className="text-slate-400 text-[13px] leading-relaxed">{s.desc}</p>
+                    <div className="mt-3 flex items-center justify-between">
+                      <div className="flex items-center gap-1 text-[11px] font-bold opacity-0 group-hover:opacity-100 transition-all duration-300 translate-x-0 group-hover:translate-x-1" style={{ color: s.accent }}>
+                        Get Started <ArrowRight className="w-3 h-3" />
+                      </div>
+                      <div className="w-6 h-6 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300" style={{ background: `${s.accent}20`, color: s.accent }}>
+                        <ArrowRight className="w-3 h-3" />
+                      </div>
                     </div>
                   </div>
                 </motion.div>
