@@ -1,3 +1,18 @@
 <svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="180" height="180" rx="36" fill="#FF3C00"/>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="180" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#050a14"/>
+      <stop offset="100%" stop-color="#0f1f5c"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="180" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1a56db" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+  <rect width="180" height="180" rx="36" fill="url(#bg)"/>
+  <rect width="180" height="180" rx="36" fill="url(#glow)"/>
+  <rect x="1" y="1" width="178" height="178" rx="35" stroke="#1a56db" stroke-width="1.5" stroke-opacity="0.4"/>
+  <text x="90" y="108" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="54" letter-spacing="-3" fill="white">AICE</text>
+  <rect x="38" y="120" width="104" height="3.5" rx="2" fill="#3b82f6" fill-opacity="0.9"/>
+  <circle cx="90" cy="136" r="2.5" fill="#3b82f6" fill-opacity="0.6"/>
 </svg>

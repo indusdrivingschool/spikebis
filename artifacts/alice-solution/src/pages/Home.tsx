@@ -119,184 +119,609 @@ const pricing = [
 ];
 
 // Cloudflare-style poster visual per service category
-function ServicePosterVisual({ tag, accent }: { tag: string; accent: string }) {
+function ServicePosterVisual({ title, accent }: { title: string; accent: string }) {
   const c = accent;
-  switch (tag) {
-    case "E-Commerce":
+  switch (title) {
+
+    case "Shopify Store Development":
       return (
         <svg viewBox="0 0 220 120" className="absolute inset-0 w-full h-full" fill="none">
-          {/* Shelf */}
-          <rect x="20" y="85" width="180" height="4" rx="2" fill={c} opacity=".18"/>
-          {/* Products */}
-          <rect x="30" y="55" width="32" height="30" rx="4" fill={c} opacity=".25"/>
-          <rect x="72" y="45" width="32" height="40" rx="4" fill={c} opacity=".35"/>
-          <rect x="114" y="60" width="32" height="25" rx="4" fill={c} opacity=".22"/>
-          <rect x="156" y="50" width="32" height="35" rx="4" fill={c} opacity=".3"/>
-          {/* Cart icon */}
-          <circle cx="165" cy="28" r="18" fill={c} opacity=".12" stroke={c} strokeWidth="1.5" strokeOpacity=".4"/>
-          <path d="M156 22h3l4 10h10l2-6h-13" stroke={c} strokeWidth="1.5" strokeOpacity=".9" strokeLinecap="round" strokeLinejoin="round"/>
-          <circle cx="163" cy="34" r="1.5" fill={c} opacity=".9"/>
-          <circle cx="169" cy="34" r="1.5" fill={c} opacity=".9"/>
-          {/* Price tag */}
-          <rect x="44" y="38" width="28" height="12" rx="6" fill={c} opacity=".2"/>
-          <text x="58" y="47.5" textAnchor="middle" fontSize="7" fill={c} opacity=".8" fontWeight="bold">$49</text>
+          {/* Storefront */}
+          <rect x="40" y="45" width="140" height="70" rx="4" stroke={c} strokeWidth="1.2" strokeOpacity=".3" fill={c} fillOpacity=".04"/>
+          {/* Awning */}
+          <path d="M35 45 L185 45 L175 28 L45 28Z" fill={c} fillOpacity=".15" stroke={c} strokeWidth="1" strokeOpacity=".3"/>
+          <line x1="67" y1="28" x2="57" y2="45" stroke={c} strokeWidth="0.8" strokeOpacity=".25"/>
+          <line x1="100" y1="28" x2="95" y2="45" stroke={c} strokeWidth="0.8" strokeOpacity=".25"/>
+          <line x1="133" y1="28" x2="133" y2="45" stroke={c} strokeWidth="0.8" strokeOpacity=".25"/>
+          <line x1="163" y1="28" x2="168" y2="45" stroke={c} strokeWidth="0.8" strokeOpacity=".25"/>
+          {/* Door */}
+          <rect x="90" y="75" width="40" height="40" rx="3" fill={c} fillOpacity=".1" stroke={c} strokeWidth="1" strokeOpacity=".3"/>
+          <circle cx="125" cy="95" r="2.5" fill={c} opacity=".6"/>
+          {/* Windows */}
+          <rect x="50" y="58" width="30" height="22" rx="3" fill={c} fillOpacity=".12" stroke={c} strokeWidth="1" strokeOpacity=".25"/>
+          <rect x="140" y="58" width="30" height="22" rx="3" fill={c} fillOpacity=".12" stroke={c} strokeWidth="1" strokeOpacity=".25"/>
+          {/* Shopify S bag */}
+          <circle cx="178" cy="22" r="14" fill={c} fillOpacity=".15" stroke={c} strokeWidth="1.2" strokeOpacity=".5"/>
+          <text x="178" y="27" textAnchor="middle" fontSize="13" fill={c} opacity=".9" fontWeight="bold" fontFamily="Arial,sans-serif">S</text>
+          {/* Sign */}
+          <rect x="70" y="18" width="80" height="14" rx="3" fill={c} fillOpacity=".1" stroke={c} strokeWidth="0.8" strokeOpacity=".3"/>
+          <rect x="76" y="22" width="50" height="4" rx="2" fill={c} opacity=".3"/>
         </svg>
       );
-    case "Paid Ads":
+
+    case "Shopify Store Management":
       return (
         <svg viewBox="0 0 220 120" className="absolute inset-0 w-full h-full" fill="none">
-          {/* Bar chart */}
-          <rect x="25" y="75" width="22" height="30" rx="3" fill={c} opacity=".2"/>
-          <rect x="55" y="55" width="22" height="50" rx="3" fill={c} opacity=".3"/>
-          <rect x="85" y="40" width="22" height="65" rx="3" fill={c} opacity=".4"/>
-          <rect x="115" y="30" width="22" height="75" rx="3" fill={c} opacity=".5"/>
-          <rect x="145" y="20" width="22" height="85" rx="3" fill={c} opacity=".6"/>
-          {/* Trend line */}
-          <polyline points="36,74 66,54 96,39 126,29 156,19" stroke={c} strokeWidth="2" strokeOpacity=".8" strokeLinecap="round"/>
-          {/* Targeting circle */}
-          <circle cx="185" cy="35" r="20" stroke={c} strokeWidth="1.5" strokeOpacity=".35" strokeDasharray="4 3"/>
-          <circle cx="185" cy="35" r="11" stroke={c} strokeWidth="1.5" strokeOpacity=".5"/>
-          <circle cx="185" cy="35" r="4" fill={c} opacity=".7"/>
-          <line x1="185" y1="14" x2="185" y2="56" stroke={c} strokeWidth="1" strokeOpacity=".4"/>
-          <line x1="164" y1="35" x2="206" y2="35" stroke={c} strokeWidth="1" strokeOpacity=".4"/>
+          {/* Dashboard card */}
+          <rect x="15" y="12" width="190" height="96" rx="8" stroke={c} strokeWidth="1.2" strokeOpacity=".25" fill={c} fillOpacity=".04"/>
+          {/* Header bar */}
+          <rect x="15" y="12" width="190" height="20" rx="8" fill={c} fillOpacity=".1"/>
+          <rect x="25" y="19" width="55" height="6" rx="3" fill={c} opacity=".35"/>
+          <circle cx="190" cy="22" r="5" fill={c} opacity=".3"/>
+          {/* KPI boxes */}
+          <rect x="25" y="42" width="45" height="28" rx="5" fill={c} fillOpacity=".1" stroke={c} strokeWidth="1" strokeOpacity=".2"/>
+          <rect x="25" y="44" width="28" height="4" rx="2" fill={c} opacity=".25"/>
+          <rect x="25" y="55" width="35" height="8" rx="2" fill={c} opacity=".45"/>
+          <rect x="80" y="42" width="45" height="28" rx="5" fill={c} fillOpacity=".1" stroke={c} strokeWidth="1" strokeOpacity=".2"/>
+          <rect x="80" y="44" width="28" height="4" rx="2" fill={c} opacity=".25"/>
+          <rect x="80" y="55" width="35" height="8" rx="2" fill={c} opacity=".45"/>
+          <rect x="135" y="42" width="60" height="28" rx="5" fill={c} fillOpacity=".1" stroke={c} strokeWidth="1" strokeOpacity=".2"/>
+          {/* Mini bar chart inside */}
+          <rect x="145" y="58" width="6" height="8" rx="1" fill={c} opacity=".3"/>
+          <rect x="155" y="52" width="6" height="14" rx="1" fill={c} opacity=".5"/>
+          <rect x="165" y="48" width="6" height="18" rx="1" fill={c} opacity=".7"/>
+          <rect x="175" y="45" width="6" height="21" rx="1" fill={c} opacity=".85"/>
+          {/* Order list */}
+          <rect x="25" y="80" width="170" height="5" rx="2" fill={c} opacity=".2"/>
+          <rect x="25" y="90" width="130" height="5" rx="2" fill={c} opacity=".15"/>
+          <circle cx="198" cy="82" r="3.5" fill="#10b981" opacity=".7"/>
+          <circle cx="198" cy="92" r="3.5" fill="#f59e0b" opacity=".6"/>
         </svg>
       );
-    case "Development":
+
+    case "Facebook & Instagram Ads":
       return (
         <svg viewBox="0 0 220 120" className="absolute inset-0 w-full h-full" fill="none">
-          {/* Browser chrome */}
-          <rect x="20" y="15" width="180" height="95" rx="8" stroke={c} strokeWidth="1.5" strokeOpacity=".3" fill={c} fillOpacity=".04"/>
-          <rect x="20" y="15" width="180" height="22" rx="8" fill={c} fillOpacity=".1"/>
-          <circle cx="35" cy="26" r="4" fill={c} opacity=".4"/>
-          <circle cx="50" cy="26" r="4" fill={c} opacity=".3"/>
-          <circle cx="65" cy="26" r="4" fill={c} opacity=".2"/>
-          <rect x="80" y="21" width="100" height="10" rx="5" fill={c} opacity=".12"/>
-          {/* Code lines */}
-          <rect x="32" y="48" width="40" height="5" rx="2" fill={c} opacity=".5"/>
-          <rect x="45" y="58" width="60" height="5" rx="2" fill={c} opacity=".35"/>
-          <rect x="45" y="68" width="50" height="5" rx="2" fill={c} opacity=".35"/>
-          <rect x="45" y="78" width="70" height="5" rx="2" fill={c} opacity=".3"/>
-          <rect x="32" y="88" width="35" height="5" rx="2" fill={c} opacity=".5"/>
-          {/* Bracket symbols */}
-          <text x="140" y="75" fontSize="32" fill={c} opacity=".12" fontFamily="monospace">{ }</text>
+          {/* Split panels */}
+          <rect x="15" y="15" width="90" height="90" rx="8" fill="#1877f2" fillOpacity=".12" stroke="#1877f2" strokeWidth="1" strokeOpacity=".3"/>
+          <rect x="115" y="15" width="90" height="90" rx="8" fill="#e1306c" fillOpacity=".1" stroke="#e1306c" strokeWidth="1" strokeOpacity=".3"/>
+          {/* FB "f" */}
+          <text x="60" y="62" textAnchor="middle" fontSize="36" fill="#1877f2" opacity=".6" fontWeight="900" fontFamily="Arial,sans-serif">f</text>
+          {/* IG camera */}
+          <rect x="143" y="38" width="34" height="34" rx="10" stroke="#e1306c" strokeWidth="2" strokeOpacity=".6" fill="none"/>
+          <circle cx="160" cy="55" r="9" stroke="#e1306c" strokeWidth="1.5" strokeOpacity=".7" fill="none"/>
+          <circle cx="174" cy="42" r="2.5" fill="#e1306c" opacity=".7"/>
+          {/* Reactions */}
+          <text x="20" y="115" fontSize="11" opacity=".6">👍 Like</text>
+          <text x="130" y="115" fontSize="11" opacity=".6">❤️ Love</text>
+          {/* Ad metrics */}
+          <rect x="22" y="88" width="40" height="5" rx="2" fill="#1877f2" opacity=".3"/>
+          <rect x="22" y="96" width="28" height="5" rx="2" fill="#1877f2" opacity=".2"/>
+          <rect x="122" y="88" width="40" height="5" rx="2" fill="#e1306c" opacity=".3"/>
+          <rect x="122" y="96" width="55" height="5" rx="2" fill="#e1306c" opacity=".2"/>
         </svg>
       );
-    case "Creative":
+
+    case "TikTok Ads":
       return (
         <svg viewBox="0 0 220 120" className="absolute inset-0 w-full h-full" fill="none">
-          {/* Color palette circles */}
-          <circle cx="60" cy="55" r="30" fill={c} opacity=".18"/>
-          <circle cx="90" cy="55" r="30" fill="#ec4899" opacity=".13"/>
-          <circle cx="75" cy="75" r="30" fill="#f59e0b" opacity=".13"/>
-          {/* Design shapes */}
-          <rect x="130" y="20" width="50" height="50" rx="8" stroke={c} strokeWidth="1.5" strokeOpacity=".4" fill={c} fillOpacity=".06" transform="rotate(12 155 45)"/>
-          <polygon points="150,80 175,40 200,80" stroke={c} strokeWidth="1.5" strokeOpacity=".35" fill={c} fillOpacity=".06"/>
-          {/* Brush */}
-          <path d="M55 25 L75 55" stroke={c} strokeWidth="3" strokeOpacity=".6" strokeLinecap="round"/>
-          <circle cx="55" cy="22" r="5" fill={c} opacity=".7"/>
+          {/* Vertical phone */}
+          <rect x="70" y="8" width="55" height="104" rx="12" stroke={c} strokeWidth="1.5" strokeOpacity=".5" fill={c} fillOpacity=".06"/>
+          <rect x="74" y="16" width="47" height="75" rx="6" fill={c} fillOpacity=".08"/>
+          {/* Play button */}
+          <circle cx="97" cy="54" r="16" fill={c} fillOpacity=".2" stroke={c} strokeWidth="1" strokeOpacity=".5"/>
+          <polygon points="92,47 92,61 109,54" fill={c} opacity=".7"/>
+          {/* TikTok note icon */}
+          <path d="M148 30 C148 22 158 18 165 22 L165 32 C158 28 152 32 152 38 L152 68 L148 68Z" fill={c} fillOpacity=".5"/>
+          <circle cx="148" cy="70" r="6" fill={c} opacity=".5"/>
+          <circle cx="152" cy="65" r="6" stroke={c} strokeWidth="1.2" strokeOpacity=".3" fill="none"/>
+          {/* Hashtags */}
+          <rect x="145" y="42" width="55" height="7" rx="3" fill={c} fillOpacity=".12"/>
+          <rect x="145" y="53" width="42" height="7" rx="3" fill={c} fillOpacity=".1"/>
+          <rect x="145" y="64" width="50" height="7" rx="3" fill={c} fillOpacity=".08"/>
+          {/* Like/comment counts */}
+          <text x="100" y="90" textAnchor="middle" fontSize="8" fill={c} opacity=".5">1.2M Views</text>
+          {/* Left side details */}
+          <rect x="20" y="30" width="40" height="7" rx="3" fill={c} fillOpacity=".15"/>
+          <rect x="20" y="42" width="30" height="7" rx="3" fill={c} fillOpacity=".1"/>
+          <rect x="20" y="54" width="35" height="7" rx="3" fill={c} fillOpacity=".1"/>
         </svg>
       );
-    case "Marketing":
+
+    case "Google Ads":
       return (
         <svg viewBox="0 0 220 120" className="absolute inset-0 w-full h-full" fill="none">
-          {/* Growth curve */}
-          <path d="M20 95 Q60 80 90 60 T160 25 T200 15" stroke={c} strokeWidth="2.5" strokeOpacity=".7" strokeLinecap="round" fill="none"/>
-          <path d="M20 95 Q60 80 90 60 T160 25 T200 15 V110 H20Z" fill={c} fillOpacity=".07"/>
-          {/* Network nodes */}
-          <circle cx="55" cy="82" r="5" fill={c} opacity=".6"/>
-          <circle cx="100" cy="58" r="6" fill={c} opacity=".7"/>
-          <circle cx="150" cy="32" r="5" fill={c} opacity=".6"/>
-          <circle cx="190" cy="20" r="8" fill={c} opacity=".8"/>
-          {/* Node lines */}
-          <line x1="55" y1="82" x2="100" y2="58" stroke={c} strokeWidth="1" strokeOpacity=".3"/>
-          <line x1="100" y1="58" x2="150" y2="32" stroke={c} strokeWidth="1" strokeOpacity=".3"/>
-          <line x1="150" y1="32" x2="190" y2="20" stroke={c} strokeWidth="1" strokeOpacity=".3"/>
-          {/* Arrow up */}
-          <path d="M195 8 L195 20 M190 13 L195 8 L200 13" stroke={c} strokeWidth="2" strokeOpacity=".8" strokeLinecap="round" strokeLinejoin="round"/>
+          {/* Search bar */}
+          <rect x="20" y="12" width="180" height="18" rx="9" stroke={c} strokeWidth="1.2" strokeOpacity=".4" fill={c} fillOpacity=".06"/>
+          <circle cx="34" cy="21" r="4" stroke={c} strokeWidth="1.2" strokeOpacity=".5" fill="none"/>
+          <line x1="37" y1="24" x2="41" y2="28" stroke={c} strokeWidth="1.5" strokeOpacity=".5" strokeLinecap="round"/>
+          <rect x="48" y="17" width="100" height="6" rx="3" fill={c} opacity=".2"/>
+          {/* Google colors */}
+          <circle cx="170" cy="21" r="4" fill="#4285F4" opacity=".7"/>
+          <circle cx="179" cy="21" r="4" fill="#EA4335" opacity=".7"/>
+          <circle cx="188" cy="21" r="4" fill="#FBBC04" opacity=".7"/>
+          {/* Sponsored result 1 */}
+          <rect x="20" y="38" width="4" height="4" rx="1" fill="#fbbc04" opacity=".8"/>
+          <rect x="28" y="38" width="30" height="4" rx="2" fill="#fbbc04" opacity=".3"/>
+          <rect x="20" y="46" width="180" height="5" rx="2" fill={c} opacity=".25"/>
+          <rect x="20" y="54" width="140" height="4" rx="2" fill={c} opacity=".15"/>
+          {/* Sponsored result 2 */}
+          <rect x="20" y="66" width="4" height="4" rx="1" fill="#fbbc04" opacity=".6"/>
+          <rect x="28" y="66" width="30" height="4" rx="2" fill="#fbbc04" opacity=".2"/>
+          <rect x="20" y="74" width="160" height="5" rx="2" fill={c} opacity=".2"/>
+          <rect x="20" y="82" width="120" height="4" rx="2" fill={c} opacity=".12"/>
+          {/* CPC badge */}
+          <rect x="140" y="90" width="60" height="20" rx="6" fill={c} fillOpacity=".12" stroke={c} strokeWidth="1" strokeOpacity=".3"/>
+          <text x="170" y="104" textAnchor="middle" fontSize="9" fill={c} opacity=".7" fontWeight="bold">CPC $2.40</text>
         </svg>
       );
-    case "Design":
+
+    case "Website Development":
       return (
         <svg viewBox="0 0 220 120" className="absolute inset-0 w-full h-full" fill="none">
-          {/* Phone wireframe */}
-          <rect x="30" y="15" width="65" height="95" rx="10" stroke={c} strokeWidth="1.5" strokeOpacity=".4" fill={c} fillOpacity=".05"/>
-          <rect x="37" y="28" width="51" height="55" rx="4" fill={c} opacity=".1"/>
-          <rect x="37" y="28" width="51" height="12" rx="4" fill={c} opacity=".2"/>
-          <rect x="37" y="88" width="22" height="6" rx="3" fill={c} opacity=".25"/>
-          <rect x="65" y="88" width="22" height="6" rx="3" fill={c} opacity=".15"/>
-          <circle cx="62" cy="22" r="3" fill={c} opacity=".3"/>
-          {/* Desktop wireframe */}
-          <rect x="115" y="20" width="90" height="62" rx="6" stroke={c} strokeWidth="1.5" strokeOpacity=".35" fill={c} fillOpacity=".04"/>
-          <rect x="115" y="20" width="90" height="14" rx="6" fill={c} fillOpacity=".12"/>
-          <rect x="122" y="42" width="35" height="5" rx="2" fill={c} opacity=".2"/>
-          <rect x="122" y="52" width="55" height="5" rx="2" fill={c} opacity=".15"/>
-          <rect x="122" y="62" width="45" height="5" rx="2" fill={c} opacity=".15"/>
-          <rect x="150" y="84" width="20" height="8" rx="2" fill={c} opacity=".18"/>
-          <rect x="145" y="92" width="30" height="4" rx="2" fill={c} opacity=".12"/>
+          {/* Browser shell */}
+          <rect x="15" y="10" width="190" height="100" rx="8" stroke={c} strokeWidth="1.2" strokeOpacity=".3" fill={c} fillOpacity=".03"/>
+          <rect x="15" y="10" width="190" height="20" rx="8" fill={c} fillOpacity=".08"/>
+          <circle cx="28" cy="20" r="3.5" fill="#ef4444" opacity=".5"/>
+          <circle cx="40" cy="20" r="3.5" fill="#f59e0b" opacity=".5"/>
+          <circle cx="52" cy="20" r="3.5" fill="#10b981" opacity=".5"/>
+          <rect x="65" y="15" width="110" height="10" rx="5" fill={c} opacity=".1"/>
+          {/* Split: left code, right preview */}
+          <line x1="115" y1="30" x2="115" y2="110" stroke={c} strokeWidth="0.8" strokeOpacity=".2"/>
+          {/* Code side */}
+          <rect x="22" y="36" width="25" height="4" rx="2" fill="#f97316" opacity=".5"/>
+          <rect x="30" y="44" width="50" height="4" rx="2" fill={c} opacity=".4"/>
+          <rect x="30" y="52" width="40" height="4" rx="2" fill="#10b981" opacity=".4"/>
+          <rect x="30" y="60" width="55" height="4" rx="2" fill={c} opacity=".35"/>
+          <rect x="30" y="68" width="35" height="4" rx="2" fill="#f59e0b" opacity=".4"/>
+          <rect x="22" y="76" width="20" height="4" rx="2" fill="#f97316" opacity=".5"/>
+          {/* Preview side */}
+          <rect x="122" y="34" width="75" height="14" rx="4" fill={c} fillOpacity=".15"/>
+          <rect x="122" y="52" width="35" height="8" rx="3" fill={c} fillOpacity=".12"/>
+          <rect x="162" y="52" width="35" height="8" rx="3" fill={c} fillOpacity=".08"/>
+          <rect x="122" y="64" width="75" height="4" rx="2" fill={c} opacity=".15"/>
+          <rect x="122" y="72" width="60" height="4" rx="2" fill={c} opacity=".1"/>
+          <rect x="122" y="88" width="45" height="12" rx="6" fill={c} fillOpacity=".2" stroke={c} strokeWidth="1" strokeOpacity=".4"/>
+        </svg>
+      );
+
+    case "Ecommerce Solutions":
+      return (
+        <svg viewBox="0 0 220 120" className="absolute inset-0 w-full h-full" fill="none">
+          {/* Shopping cart */}
+          <circle cx="55" cy="55" r="32" fill={c} fillOpacity=".1" stroke={c} strokeWidth="1" strokeOpacity=".3"/>
+          <path d="M38 42h5l7 20h18l4-12H48" stroke={c} strokeWidth="2" strokeOpacity=".8" strokeLinecap="round" strokeLinejoin="round"/>
+          <circle cx="51" cy="65" r="3" fill={c} opacity=".8"/>
+          <circle cx="62" cy="65" r="3" fill={c} opacity=".8"/>
+          {/* Payment card */}
+          <rect x="100" y="30" width="100" height="60" rx="8" fill={c} fillOpacity=".1" stroke={c} strokeWidth="1.2" strokeOpacity=".4"/>
+          <rect x="100" y="30" width="100" height="20" rx="8" fill={c} fillOpacity=".2"/>
+          <rect x="110" y="58" width="50" height="8" rx="2" fill={c} opacity=".25"/>
+          <rect x="110" y="70" width="30" height="6" rx="2" fill={c} opacity=".18"/>
+          <circle cx="180" cy="40" r="8" fill={c} fillOpacity=".3"/>
+          <circle cx="172" cy="40" r="8" stroke={c} strokeWidth="1" strokeOpacity=".4" fill={c} fillOpacity=".15"/>
+          {/* Connect arrow */}
+          <path d="M90 55 L98 55" stroke={c} strokeWidth="1.5" strokeOpacity=".5" strokeLinecap="round"/>
+          <path d="M95 52 L98 55 L95 58" stroke={c} strokeWidth="1.5" strokeOpacity=".5" strokeLinecap="round" strokeLinejoin="round"/>
+          {/* Checkmark */}
+          <path d="M155 82 L160 88 L172 76" stroke="#10b981" strokeWidth="2" strokeOpacity=".8" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      );
+
+    case "Graphic Design":
+      return (
+        <svg viewBox="0 0 220 120" className="absolute inset-0 w-full h-full" fill="none">
+          {/* Bezier pen path */}
+          <path d="M30 90 C 60 20, 130 20, 160 70" stroke={c} strokeWidth="2" strokeOpacity=".6" fill="none" strokeLinecap="round"/>
+          {/* Control handles */}
+          <line x1="30" y1="90" x2="60" y2="20" stroke={c} strokeWidth="0.8" strokeOpacity=".3" strokeDasharray="3 3"/>
+          <line x1="160" y1="70" x2="130" y2="20" stroke={c} strokeWidth="0.8" strokeOpacity=".3" strokeDasharray="3 3"/>
+          <rect x="26" y="86" width="8" height="8" rx="2" fill={c} opacity=".7"/>
+          <rect x="156" y="66" width="8" height="8" rx="2" fill={c} opacity=".7"/>
+          <circle cx="60" cy="20" r="5" stroke={c} strokeWidth="1.2" strokeOpacity=".6" fill="none"/>
+          <circle cx="130" cy="20" r="5" stroke={c} strokeWidth="1.2" strokeOpacity=".6" fill="none"/>
+          {/* Color swatches */}
+          <circle cx="170" cy="35" r="12" fill={c} opacity=".7"/>
+          <circle cx="190" cy="35" r="12" fill="#f97316" opacity=".6"/>
+          <circle cx="180" cy="52" r="12" fill="#ec4899" opacity=".6"/>
+          {/* Aa typography */}
+          <text x="30" y="115" fontSize="22" fill={c} opacity=".35" fontWeight="900" fontFamily="Arial Black,Arial,sans-serif">Aa</text>
+          {/* Grid lines */}
+          <line x1="15" y1="60" x2="205" y2="60" stroke={c} strokeWidth="0.5" strokeOpacity=".1"/>
+          <line x1="110" y1="5" x2="110" y2="115" stroke={c} strokeWidth="0.5" strokeOpacity=".1"/>
+        </svg>
+      );
+
+    case "Video Editing":
+      return (
+        <svg viewBox="0 0 220 120" className="absolute inset-0 w-full h-full" fill="none">
+          {/* Film strip */}
+          <rect x="15" y="18" width="190" height="50" rx="4" fill={c} fillOpacity=".08" stroke={c} strokeWidth="1" strokeOpacity=".25"/>
+          {/* Perforations */}
+          {[20,38,56,74,92,110,128,146,164,182].map((x,i) => (
+            <rect key={i} x={x} y="22" width="10" height="8" rx="2" fill={c} opacity=".2"/>
+          ))}
+          {[20,38,56,74,92,110,128,146,164,182].map((x,i) => (
+            <rect key={i} x={x} y="56" width="10" height="8" rx="2" fill={c} opacity=".2"/>
+          ))}
+          {/* Frame previews */}
+          <rect x="20" y="32" width="30" height="22" rx="2" fill={c} fillOpacity=".15"/>
+          <rect x="55" y="32" width="30" height="22" rx="2" fill={c} fillOpacity=".25"/>
+          <rect x="90" y="32" width="30" height="22" rx="2" fill={c} fillOpacity=".2"/>
+          <rect x="125" y="32" width="30" height="22" rx="2" fill={c} fillOpacity=".3"/>
+          <rect x="160" y="32" width="30" height="22" rx="2" fill={c} fillOpacity=".18"/>
+          {/* Play button on active frame */}
+          <polygon points="128,40 128,48 137,44" fill={c} opacity=".8"/>
+          {/* Playhead */}
+          <line x1="140" y1="14" x2="140" y2="70" stroke={c} strokeWidth="2" strokeOpacity=".8" strokeLinecap="round"/>
+          <polygon points="135,12 145,12 140,18" fill={c} opacity=".9"/>
+          {/* Audio waveform */}
+          {[18,30,45,22,38,55,20,42,60,25,35,50,28,44,33].map((h,i) => (
+            <rect key={i} x={20 + i * 12} y={90 + (30 - h) / 2} width="6" height={h * 0.5} rx="3" fill={c} opacity={.2 + i * 0.03}/>
+          ))}
+        </svg>
+      );
+
+    case "Branding":
+      return (
+        <svg viewBox="0 0 220 120" className="absolute inset-0 w-full h-full" fill="none">
+          {/* Golden ratio spiral construction */}
+          <rect x="55" y="15" width="90" height="90" rx="3" stroke={c} strokeWidth="0.8" strokeOpacity=".2" fill="none"/>
+          <rect x="55" y="15" width="55" height="55" rx="3" stroke={c} strokeWidth="0.8" strokeOpacity=".2" fill="none"/>
+          <rect x="55" y="70" width="34" height="34" rx="2" stroke={c} strokeWidth="0.8" strokeOpacity=".2" fill="none"/>
+          <rect x="89" y="87" width="21" height="17" rx="2" stroke={c} strokeWidth="0.8" strokeOpacity=".15" fill="none"/>
+          {/* Spiral arc */}
+          <path d="M110 70 Q110 15 55 15" stroke={c} strokeWidth="2" strokeOpacity=".5" fill="none" strokeLinecap="round"/>
+          <path d="M89 104 Q55 104 55 70" stroke={c} strokeWidth="1.5" strokeOpacity=".4" fill="none" strokeLinecap="round"/>
+          <path d="M110 91 Q110 104 89 104" stroke={c} strokeWidth="1" strokeOpacity=".3" fill="none" strokeLinecap="round"/>
+          {/* Brand palette */}
+          <circle cx="165" cy="30" r="11" fill={c} opacity=".8"/>
+          <circle cx="185" cy="30" r="11" fill="#1a56db" opacity=".6"/>
+          <circle cx="175" cy="46" r="11" fill="#050a14" stroke={c} strokeWidth="1.2" strokeOpacity=".5"/>
+          {/* "Aa" brand type */}
+          <text x="28" y="72" fontSize="30" fill={c} opacity=".45" fontWeight="900" fontFamily="Georgia,serif">Aa</text>
+        </svg>
+      );
+
+    case "SEO Optimization":
+      return (
+        <svg viewBox="0 0 220 120" className="absolute inset-0 w-full h-full" fill="none">
+          {/* Search results list */}
+          <rect x="15" y="10" width="130" height="100" rx="6" stroke={c} strokeWidth="1" strokeOpacity=".25" fill={c} fillOpacity=".03"/>
+          {/* Result rows */}
+          {[22, 48, 74].map((y, i) => (
+            <g key={i}>
+              <rect x={24} y={y} width={20} height={20} rx="4" fill={c} fillOpacity={i === 0 ? ".25" : ".1"}/>
+              <text x={34} y={y + 14} textAnchor="middle" fontSize="10" fill={c} opacity={i === 0 ? ".9" : ".4"} fontWeight="bold">#{i+1}</text>
+              <rect x={50} y={y + 4} width={75} height={4} rx="2" fill={c} opacity={i === 0 ? ".5" : ".2"}/>
+              <rect x={50} y={y + 12} width={55} height={3} rx="2" fill={c} opacity={i === 0 ? ".3" : ".12"}/>
+            </g>
+          ))}
+          {/* Trophy / #1 badge */}
+          <circle cx="24" cy="32" r="0" fill="none"/>
+          {/* Upward rank chart */}
+          <polyline points="160,105 170,90 180,75 190,55 200,35 205,20" stroke={c} strokeWidth="2.5" strokeOpacity=".7" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+          <circle cx="160" cy="105" r="4" fill={c} opacity=".5"/>
+          <circle cx="180" cy="75" r="4" fill={c} opacity=".65"/>
+          <circle cx="200" cy="35" r="5" fill={c} opacity=".9"/>
+          {/* Keyword tags */}
+          <rect x="155" y="108" width="38" height="9" rx="4" fill={c} fillOpacity=".15"/>
+          <rect x="155" y="95" width="28" height="9" rx="4" fill={c} fillOpacity=".1"/>
+        </svg>
+      );
+
+    case "Social Media Marketing":
+      return (
+        <svg viewBox="0 0 220 120" className="absolute inset-0 w-full h-full" fill="none">
+          {/* Central hub */}
+          <circle cx="110" cy="58" r="18" fill={c} fillOpacity=".2" stroke={c} strokeWidth="1.5" strokeOpacity=".5"/>
+          <text x="110" y="63" textAnchor="middle" fontSize="14" fill={c} opacity=".8" fontWeight="bold" fontFamily="Arial,sans-serif">◉</text>
+          {/* Platform nodes with connection lines */}
+          {[
+            [50, 20, "#1877f2", "f"],
+            [170, 20, "#e1306c", "▣"],
+            [30, 80, "#1da1f2", "t"],
+            [190, 80, "#ff0000", "▶"],
+            [110, 105, "#0a66c2", "in"],
+          ].map(([nx, ny, col, lbl], i) => (
+            <g key={i}>
+              <line x1={110} y1={58} x2={nx as number} y2={ny as number} stroke={c} strokeWidth="1" strokeOpacity=".2" strokeDasharray="4 3"/>
+              <circle cx={nx as number} cy={ny as number} r="13" fill={col as string} fillOpacity=".2" stroke={col as string} strokeWidth="1.2" strokeOpacity=".5"/>
+              <text x={nx as number} y={(ny as number) + 5} textAnchor="middle" fontSize="9" fill={col as string} opacity=".9" fontWeight="bold">{lbl as string}</text>
+            </g>
+          ))}
+          {/* Engagement metrics */}
+          <rect x="85" y="30" width="50" height="14" rx="7" fill={c} fillOpacity=".1"/>
+          <text x="110" y="41" textAnchor="middle" fontSize="8" fill={c} opacity=".6">❤ 12.4K</text>
+        </svg>
+      );
+
+    case "Digital Marketing":
+      return (
+        <svg viewBox="0 0 220 120" className="absolute inset-0 w-full h-full" fill="none">
+          {/* Marketing funnel */}
+          <path d="M40 12 L180 12 L155 45 L65 45Z" fill={c} fillOpacity=".2" stroke={c} strokeWidth="1" strokeOpacity=".4"/>
+          <path d="M65 45 L155 45 L135 78 L85 78Z" fill={c} fillOpacity=".15" stroke={c} strokeWidth="1" strokeOpacity=".35"/>
+          <path d="M85 78 L135 78 L120 105 L100 105Z" fill={c} fillOpacity=".25" stroke={c} strokeWidth="1" strokeOpacity=".5"/>
+          {/* Funnel labels */}
+          <text x="110" y="30" textAnchor="middle" fontSize="8" fill={c} opacity=".6" fontWeight="bold">AWARENESS</text>
+          <text x="110" y="62" textAnchor="middle" fontSize="8" fill={c} opacity=".6" fontWeight="bold">INTEREST</text>
+          <text x="110" y="95" textAnchor="middle" fontSize="7" fill={c} opacity=".8" fontWeight="bold">CONVERT</text>
+          {/* Channel icons left */}
+          <rect x="15" y="14" width="20" height="9" rx="4" fill="#1877f2" fillOpacity=".3"/>
+          <rect x="15" y="28" width="20" height="9" rx="4" fill="#fbbc04" fillOpacity=".3"/>
+          <rect x="15" y="42" width="20" height="9" rx="4" fill="#1da1f2" fillOpacity=".3"/>
+          {/* Channel icons right */}
+          <rect x="185" y="14" width="20" height="9" rx="4" fill="#84cc16" fillOpacity=".3"/>
+          <rect x="185" y="28" width="20" height="9" rx="4" fill="#ff2d55" fillOpacity=".3"/>
+          <rect x="185" y="42" width="20" height="9" rx="4" fill="#8b5cf6" fillOpacity=".3"/>
+          {/* Conversion spark */}
+          <path d="M100 105 L108 90 L104 95 L112 78" stroke="#f59e0b" strokeWidth="1.5" strokeOpacity=".6" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      );
+
+    case "UI/UX Design":
+      return (
+        <svg viewBox="0 0 220 120" className="absolute inset-0 w-full h-full" fill="none">
+          {/* Design grid */}
+          {[50,90,130,170].map((x,i) => <line key={i} x1={x} y1="5" x2={x} y2="115" stroke={c} strokeWidth="0.5" strokeOpacity=".1"/>)}
+          {[25,55,85,105].map((y,i) => <line key={i} x1="15" y1={y} x2="205" y2={y} stroke={c} strokeWidth="0.5" strokeOpacity=".1"/>)}
+          {/* Component: Button */}
+          <rect x="22" y="15" width="55" height="20" rx="10" fill={c} fillOpacity=".2" stroke={c} strokeWidth="1.2" strokeOpacity=".5"/>
+          <rect x="28" y="22" width="40" height="5" rx="2" fill={c} opacity=".4"/>
+          {/* Component: Input */}
+          <rect x="87" y="15" width="75" height="20" rx="4" stroke={c} strokeWidth="1" strokeOpacity=".35" fill={c} fillOpacity=".05"/>
+          <rect x="91" y="22" width="35" height="5" rx="2" fill={c} opacity=".2"/>
+          <line x1="162" y1="18" x2="162" y2="28" stroke={c} strokeWidth="1.5" strokeOpacity=".6"/>
+          {/* Component: Card */}
+          <rect x="22" y="45" width="75" height="65" rx="8" stroke={c} strokeWidth="1.2" strokeOpacity=".35" fill={c} fillOpacity=".05"/>
+          <rect x="22" y="45" width="75" height="28" rx="8" fill={c} fillOpacity=".12"/>
+          <rect x="30" y="80" width="55" height="5" rx="2" fill={c} opacity=".3"/>
+          <rect x="30" y="90" width="40" height="4" rx="2" fill={c} opacity=".18"/>
+          <rect x="30" y="100" width="30" height="8" rx="4" fill={c} fillOpacity=".25"/>
+          {/* Component: Toggle */}
+          <rect x="107" y="45" width="50" height="24" rx="12" fill={c} fillOpacity=".15" stroke={c} strokeWidth="1" strokeOpacity=".35"/>
+          <circle cx="143" cy="57" r="9" fill={c} opacity=".7"/>
+          {/* Component: Avatar */}
+          <circle cx="140" cy="90" r="18" stroke={c} strokeWidth="1" strokeOpacity=".3" fill={c} fillOpacity=".07"/>
+          <circle cx="140" cy="86" r="7" fill={c} opacity=".25"/>
+          <path d="M122 108 Q122 98 140 98 Q158 98 158 108" fill={c} fillOpacity=".2"/>
           {/* Cursor */}
-          <path d="M185 50 L185 65 L189 60 L193 68 L195 67 L191 59 L196 59Z" fill={c} opacity=".7"/>
+          <path d="M185 38 L185 55 L189 49 L194 58 L196 57 L191 48 L197 48Z" fill={c} opacity=".75"/>
         </svg>
       );
-    case "Technology":
+
+    case "AI Automation":
       return (
         <svg viewBox="0 0 220 120" className="absolute inset-0 w-full h-full" fill="none">
-          {/* Neural network */}
-          {[[40,30],[40,60],[40,90],[100,20],[100,50],[100,80],[100,105],[165,40],[165,75]].map(([cx,cy],i)=>(
-            <circle key={i} cx={cx} cy={cy} r="5" fill={c} opacity={i < 3 ? ".5" : i < 7 ? ".7" : ".9"}/>
-          ))}
-          {/* Connections layer 1-2 */}
-          {[[40,30,100,20],[40,30,100,50],[40,60,100,20],[40,60,100,50],[40,60,100,80],[40,90,100,50],[40,90,100,80],[40,90,100,105]].map(([x1,y1,x2,y2],i)=>(
-            <line key={i} x1={x1} y1={y1} x2={x2} y2={y2} stroke={c} strokeWidth="0.8" strokeOpacity=".2"/>
-          ))}
-          {/* Connections layer 2-3 */}
-          {[[100,20,165,40],[100,50,165,40],[100,50,165,75],[100,80,165,75],[100,105,165,75]].map(([x1,y1,x2,y2],i)=>(
-            <line key={i} x1={x1} y1={y1} x2={x2} y2={y2} stroke={c} strokeWidth="0.8" strokeOpacity=".25"/>
-          ))}
-          {/* AI brain circle */}
-          <circle cx="165" cy="57" r="28" stroke={c} strokeWidth="1.5" strokeOpacity=".25" strokeDasharray="5 3"/>
-          <circle cx="165" cy="57" r="18" stroke={c} strokeWidth="1" strokeOpacity=".15"/>
+          {/* Bot head */}
+          <rect x="80" y="18" width="60" height="50" rx="12" fill={c} fillOpacity=".15" stroke={c} strokeWidth="1.5" strokeOpacity=".5"/>
+          <circle cx="98" cy="38" r="6" fill={c} opacity=".7"/>
+          <circle cx="122" cy="38" r="6" fill={c} opacity=".7"/>
+          <rect x="96" y="52" width="28" height="5" rx="2.5" fill={c} opacity=".4"/>
+          <rect x="105" y="10" width="10" height="8" rx="3" fill={c} opacity=".5"/>
+          {/* Chat bubbles */}
+          <rect x="15" y="80" width="85" height="22" rx="11" fill={c} fillOpacity=".12" stroke={c} strokeWidth="1" strokeOpacity=".3"/>
+          <rect x="20" y="87" width="60" height="5" rx="2" fill={c} opacity=".3"/>
+          <path d="M20 102 L15 108 L28 102Z" fill={c} fillOpacity=".12"/>
+          <rect x="120" y="80" width="85" height="22" rx="11" fill={c} fillOpacity=".2" stroke={c} strokeWidth="1" strokeOpacity=".45"/>
+          <rect x="126" y="87" width="65" height="5" rx="2" fill={c} opacity=".45"/>
+          <path d="M200 102 L205 108 L192 102Z" fill={c} fillOpacity=".2"/>
+          {/* Flow arrows */}
+          <path d="M110 68 L110 78" stroke={c} strokeWidth="1.5" strokeOpacity=".5" strokeLinecap="round"/>
+          <path d="M106 75 L110 78 L114 75" stroke={c} strokeWidth="1.5" strokeOpacity=".5" strokeLinecap="round" strokeLinejoin="round"/>
+          {/* Circuit dots */}
+          <circle cx="40" cy="20" r="3" fill={c} opacity=".3"/>
+          <circle cx="60" cy="20" r="3" fill={c} opacity=".25"/>
+          <line x1="43" y1="20" x2="57" y2="20" stroke={c} strokeWidth="0.8" strokeOpacity=".2"/>
+          <circle cx="160" cy="20" r="3" fill={c} opacity=".3"/>
+          <circle cx="180" cy="20" r="3" fill={c} opacity=".25"/>
+          <line x1="163" y1="20" x2="177" y2="20" stroke={c} strokeWidth="0.8" strokeOpacity=".2"/>
         </svg>
       );
-    case "Strategy":
+
+    case "Freelancing Services":
       return (
         <svg viewBox="0 0 220 120" className="absolute inset-0 w-full h-full" fill="none">
-          {/* Globe grid */}
-          <ellipse cx="110" cy="60" rx="45" ry="45" stroke={c} strokeWidth="1.2" strokeOpacity=".3"/>
-          <ellipse cx="110" cy="60" rx="20" ry="45" stroke={c} strokeWidth="1" strokeOpacity=".2"/>
-          <ellipse cx="110" cy="60" rx="45" ry="20" stroke={c} strokeWidth="1" strokeOpacity=".2"/>
-          <line x1="65" y1="60" x2="155" y2="60" stroke={c} strokeWidth="1" strokeOpacity=".2"/>
-          <line x1="110" y1="15" x2="110" y2="105" stroke={c} strokeWidth="1" strokeOpacity=".2"/>
-          {/* Location pins */}
-          <circle cx="85" cy="45" r="4" fill={c} opacity=".8"/>
-          <circle cx="135" cy="55" r="4" fill={c} opacity=".7"/>
-          <circle cx="115" cy="80" r="3" fill={c} opacity=".6"/>
-          {/* Connection arcs */}
-          <path d="M85 45 Q110 30 135 55" stroke={c} strokeWidth="1.5" strokeOpacity=".5" strokeDasharray="4 2" fill="none"/>
-          <path d="M135 55 Q125 70 115 80" stroke={c} strokeWidth="1.5" strokeOpacity=".4" strokeDasharray="4 2" fill="none"/>
-        </svg>
-      );
-    default: // Services
-      return (
-        <svg viewBox="0 0 220 120" className="absolute inset-0 w-full h-full" fill="none">
-          {/* Task cards */}
-          <rect x="20" y="20" width="80" height="45" rx="6" stroke={c} strokeWidth="1.5" strokeOpacity=".35" fill={c} fillOpacity=".06"/>
-          <rect x="27" y="30" width="45" height="5" rx="2" fill={c} opacity=".4"/>
-          <rect x="27" y="40" width="60" height="4" rx="2" fill={c} opacity=".25"/>
-          <rect x="27" y="50" width="35" height="4" rx="2" fill={c} opacity=".2"/>
-          <rect x="115" y="35" width="80" height="45" rx="6" stroke={c} strokeWidth="1.5" strokeOpacity=".35" fill={c} fillOpacity=".06"/>
-          <rect x="122" y="45" width="45" height="5" rx="2" fill={c} opacity=".4"/>
-          <rect x="122" y="55" width="60" height="4" rx="2" fill={c} opacity=".25"/>
-          <rect x="122" y="65" width="35" height="4" rx="2" fill={c} opacity=".2"/>
-          {/* Check marks */}
-          <path d="M75 42 L78 46 L85 38" stroke={c} strokeWidth="2" strokeOpacity=".7" strokeLinecap="round" strokeLinejoin="round"/>
-          {/* Arrow connecting */}
-          <path d="M102 42 L113 42" stroke={c} strokeWidth="1.5" strokeOpacity=".4" strokeLinecap="round"/>
-          <path d="M110 39 L113 42 L110 45" stroke={c} strokeWidth="1.5" strokeOpacity=".4" strokeLinecap="round" strokeLinejoin="round"/>
+          {/* Stacked profile cards */}
+          <rect x="55" y="55" width="120" height="55" rx="8" stroke={c} strokeWidth="1" strokeOpacity=".2" fill={c} fillOpacity=".03" transform="rotate(-3 115 82)"/>
+          <rect x="55" y="50" width="120" height="55" rx="8" stroke={c} strokeWidth="1" strokeOpacity=".25" fill={c} fillOpacity=".05" transform="rotate(-1.5 115 77)"/>
+          {/* Front card */}
+          <rect x="50" y="42" width="120" height="65" rx="8" fill={c} fillOpacity=".1" stroke={c} strokeWidth="1.2" strokeOpacity=".4"/>
+          {/* Avatar */}
+          <circle cx="75" cy="62" r="14" fill={c} fillOpacity=".2" stroke={c} strokeWidth="1" strokeOpacity=".4"/>
+          <circle cx="75" cy="58" r="5" fill={c} opacity=".4"/>
+          <path d="M62 74 Q62 70 75 70 Q88 70 88 74" fill={c} fillOpacity=".3"/>
+          {/* Name + role */}
+          <rect x="96" y="52" width="55" height="6" rx="3" fill={c} opacity=".45"/>
+          <rect x="96" y="62" width="40" height="5" rx="2" fill={c} opacity=".25"/>
           {/* Stars */}
-          <text x="30" y="95" fontSize="14" fill={c} opacity=".5">★ ★ ★ ★ ★</text>
+          <text x="96" y="80" fontSize="10" fill="#f59e0b" opacity=".8">★★★★★</text>
+          {/* Skill tags */}
+          <rect x="52" y="98" width="28" height="7" rx="3" fill={c} fillOpacity=".2"/>
+          <rect x="84" y="98" width="35" height="7" rx="3" fill={c} fillOpacity=".15"/>
+          <rect x="123" y="98" width="30" height="7" rx="3" fill={c} fillOpacity=".12"/>
+          {/* Top decorative */}
+          <circle cx="170" cy="22" r="16" fill={c} fillOpacity=".1" stroke={c} strokeWidth="1" strokeOpacity=".25"/>
+          <path d="M162 22 L168 28 L178 16" stroke={c} strokeWidth="2" strokeOpacity=".6" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      );
+
+    case "Fiverr Business Solutions":
+      return (
+        <svg viewBox="0 0 220 120" className="absolute inset-0 w-full h-full" fill="none">
+          {/* Gig card stack */}
+          <rect x="25" y="35" width="100" height="70" rx="6" stroke={c} strokeWidth="1" strokeOpacity=".2" fill={c} fillOpacity=".03" transform="translate(4,4)"/>
+          <rect x="25" y="35" width="100" height="70" rx="6" stroke={c} strokeWidth="1.2" strokeOpacity=".4" fill={c} fillOpacity=".08"/>
+          {/* Gig thumbnail area */}
+          <rect x="25" y="35" width="100" height="35" rx="6" fill={c} fillOpacity=".15"/>
+          <text x="75" y="56" textAnchor="middle" fontSize="18" fill={c} opacity=".5">🎨</text>
+          {/* Gig details */}
+          <rect x="32" y="78" width="70" height="5" rx="2" fill={c} opacity=".4"/>
+          <rect x="32" y="87" width="50" height="4" rx="2" fill={c} opacity=".22"/>
+          {/* Green order button */}
+          <rect x="32" y="96" width="55" height="12" rx="6" fill={c} fillOpacity=".3" stroke={c} strokeWidth="1" strokeOpacity=".5"/>
+          <text x="59" y="106" textAnchor="middle" fontSize="8" fill={c} opacity=".9" fontWeight="bold">ORDER NOW</text>
+          {/* Order queue right side */}
+          <rect x="140" y="20" width="65" height="95" rx="8" stroke={c} strokeWidth="1" strokeOpacity=".25" fill={c} fillOpacity=".04"/>
+          <text x="172" y="38" textAnchor="middle" fontSize="8" fill={c} opacity=".4" fontWeight="bold">QUEUE</text>
+          {[48,64,80,96].map((y, i) => (
+            <g key={i}>
+              <circle cx="153" cy={y} r="5" fill={c} opacity={.3 + i * 0.1}/>
+              <rect x="163" y={y-3} width="32" height="4" rx="2" fill={c} opacity={.2 + i * 0.08}/>
+              <rect x="163" y={y+2} width="22" height="3" rx="2" fill={c} opacity={.1 + i * 0.05}/>
+            </g>
+          ))}
+          {/* Fiverr "f" */}
+          <circle cx="30" cy="22" r="14" fill={c} fillOpacity=".15" stroke={c} strokeWidth="1.2" strokeOpacity=".4"/>
+          <text x="30" y="27" textAnchor="middle" fontSize="14" fill={c} opacity=".8" fontWeight="900" fontFamily="Arial,sans-serif">f</text>
+        </svg>
+      );
+
+    case "Website Maintenance":
+      return (
+        <svg viewBox="0 0 220 120" className="absolute inset-0 w-full h-full" fill="none">
+          {/* Shield */}
+          <path d="M85 15 L135 15 L145 25 L145 65 Q145 90 110 105 Q75 90 75 65 L75 25Z" fill={c} fillOpacity=".12" stroke={c} strokeWidth="1.5" strokeOpacity=".45"/>
+          {/* Checkmark */}
+          <path d="M94 58 L106 70 L126 48" stroke={c} strokeWidth="3" strokeOpacity=".8" strokeLinecap="round" strokeLinejoin="round"/>
+          {/* Uptime arc */}
+          <path d="M30 100 A55 55 0 0 1 100 40" stroke={c} strokeWidth="4" strokeOpacity=".15" fill="none" strokeLinecap="round"/>
+          <path d="M30 100 A55 55 0 0 1 97 42" stroke={c} strokeWidth="3" strokeOpacity=".6" fill="none" strokeLinecap="round"/>
+          <text x="18" y="116" fontSize="8" fill={c} opacity=".5" fontWeight="bold">99.9%</text>
+          {/* Wrench */}
+          <path d="M165 30 Q180 20 185 35 L170 50 L162 58 L158 54 L166 46Z" fill={c} fillOpacity=".3" stroke={c} strokeWidth="1" strokeOpacity=".5"/>
+          <line x1="162" y1="58" x2="150" y2="70" stroke={c} strokeWidth="3" strokeOpacity=".4" strokeLinecap="round"/>
+          {/* Server rack */}
+          {[75,87,99].map((y, i) => (
+            <g key={i}>
+              <rect x="155" y={y} width="50" height="9" rx="2" stroke={c} strokeWidth="0.8" strokeOpacity=".25" fill={c} fillOpacity=".05"/>
+              <circle cx="160" cy={y+4} r="2.5" fill={i===0 ? "#10b981" : c} opacity=".6"/>
+            </g>
+          ))}
+        </svg>
+      );
+
+    case "Business Growth Strategy":
+      return (
+        <svg viewBox="0 0 220 120" className="absolute inset-0 w-full h-full" fill="none">
+          {/* Strategy pyramid */}
+          <polygon points="110,10 180,105 40,105" fill={c} fillOpacity=".08" stroke={c} strokeWidth="1.2" strokeOpacity=".4"/>
+          {/* Tiers */}
+          <line x1="74" y1="73" x2="146" y2="73" stroke={c} strokeWidth="1" strokeOpacity=".25"/>
+          <line x1="57" y1="105" x2="163" y2="105" stroke={c} strokeWidth="1" strokeOpacity=".25"/>
+          {/* Tier fills */}
+          <polygon points="110,10 146,73 74,73" fill={c} fillOpacity=".2"/>
+          <polygon points="74,73 146,73 163,105 57,105" fill={c} fillOpacity=".1"/>
+          {/* Labels */}
+          <text x="110" y="52" textAnchor="middle" fontSize="7" fill={c} opacity=".8" fontWeight="bold">VISION</text>
+          <text x="110" y="92" textAnchor="middle" fontSize="7" fill={c} opacity=".6" fontWeight="bold">STRATEGY</text>
+          {/* Globe right */}
+          <circle cx="182" cy="40" r="26" stroke={c} strokeWidth="1" strokeOpacity=".25" fill="none"/>
+          <ellipse cx="182" cy="40" rx="12" ry="26" stroke={c} strokeWidth="0.8" strokeOpacity=".18" fill="none"/>
+          <ellipse cx="182" cy="40" rx="26" ry="10" stroke={c} strokeWidth="0.8" strokeOpacity=".18" fill="none"/>
+          <circle cx="174" cy="33" r="3" fill={c} opacity=".7"/>
+          <circle cx="190" cy="44" r="3" fill={c} opacity=".6"/>
+          <path d="M174 33 Q182 28 190 44" stroke={c} strokeWidth="1" strokeOpacity=".4" strokeDasharray="3 2" fill="none"/>
+          {/* Roadmap timeline */}
+          <line x1="15" y1="80" x2="40" y2="80" stroke={c} strokeWidth="1.2" strokeOpacity=".3"/>
+          {[15,25,35].map((x,i) => (
+            <circle key={i} cx={x} cy="80" r="4" fill={i < 2 ? c : "none"} stroke={c} strokeWidth="1.2" strokeOpacity=".5" opacity=".7"/>
+          ))}
+        </svg>
+      );
+
+    default:
+      return (
+        <svg viewBox="0 0 220 120" className="absolute inset-0 w-full h-full" fill="none">
+          <circle cx="110" cy="60" r="40" stroke={c} strokeWidth="1.5" strokeOpacity=".3" fill={c} fillOpacity=".06"/>
+          <rect x="80" y="42" width="60" height="36" rx="6" stroke={c} strokeWidth="1.2" strokeOpacity=".4" fill={c} fillOpacity=".1"/>
+          <rect x="88" y="52" width="44" height="5" rx="2" fill={c} opacity=".4"/>
+          <rect x="88" y="62" width="30" height="4" rx="2" fill={c} opacity=".25"/>
         </svg>
       );
   }
+}
+
+// Header stats slider
+const HEADER_STATS = [
+  { value: "500+", label: "Projects Completed", icon: <Rocket className="w-5 h-5" />, color: "#3b82f6" },
+  { value: "200+", label: "Growing Businesses", icon: <TrendingUp className="w-5 h-5" />, color: "#10b981" },
+  { value: "30+",  label: "Countries Served",   icon: <Globe className="w-5 h-5" />,   color: "#a855f7" },
+  { value: "18+",  label: "Years of Excellence", icon: <Award className="w-5 h-5" />,   color: "#f59e0b" },
+  { value: "100%", label: "Satisfaction Rate",   icon: <Star className="w-5 h-5" />,    color: "#ec4899" },
+];
+
+function StatsSlider() {
+  const [current, setCurrent] = useState(0);
+  useEffect(() => {
+    const t = setInterval(() => setCurrent(p => (p + 1) % HEADER_STATS.length), 3200);
+    return () => clearInterval(t);
+  }, []);
+  const stat = HEADER_STATS[current];
+  return (
+    <div className="relative z-50 bg-[#020810] border-b border-white/[0.05] overflow-hidden">
+      <div className="container mx-auto px-6 py-3 flex items-center gap-6">
+        {/* Desktop — all stats visible, active one highlighted */}
+        <div className="hidden lg:flex items-center flex-1 divide-x divide-white/[0.06]">
+          {HEADER_STATS.map((s, i) => (
+            <button key={i} onClick={() => setCurrent(i)}
+              className="flex items-center gap-2.5 px-6 first:pl-0 transition-all duration-500 group cursor-pointer"
+              style={{ opacity: i === current ? 1 : 0.38 }}>
+              <span className="transition-colors duration-300" style={{ color: i === current ? s.color : "#94a3b8" }}>
+                {s.icon}
+              </span>
+              <div className="text-left">
+                <div className="font-black text-[15px] leading-none transition-colors duration-300"
+                  style={{ color: i === current ? s.color : "white" }}>
+                  {s.value}
+                </div>
+                <div className="text-[10px] text-slate-500 font-semibold uppercase tracking-wider mt-0.5">
+                  {s.label}
+                </div>
+              </div>
+            </button>
+          ))}
+        </div>
+
+        {/* Mobile — cycling single stat */}
+        <div className="lg:hidden flex-1">
+          <AnimatePresence mode="wait">
+            <motion.div key={current}
+              initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.3 }}
+              className="flex items-center gap-2.5">
+              <span style={{ color: stat.color }}>{stat.icon}</span>
+              <span className="font-black text-white text-sm">{stat.value}</span>
+              <span className="text-slate-400 text-xs">{stat.label}</span>
+            </motion.div>
+          </AnimatePresence>
+        </div>
+
+        {/* Progress dots */}
+        <div className="flex items-center gap-1.5 shrink-0">
+          {HEADER_STATS.map((s, i) => (
+            <button key={i} onClick={() => setCurrent(i)}
+              className="rounded-full transition-all duration-400"
+              style={{
+                width: i === current ? "18px" : "5px",
+                height: "5px",
+                background: i === current ? s.color : "rgba(255,255,255,0.18)",
+              }} />
+          ))}
+        </div>
+      </div>
+      {/* Progress bar */}
+      <motion.div
+        key={current}
+        className="absolute bottom-0 left-0 h-[2px]"
+        style={{ background: stat.color }}
+        initial={{ width: "0%" }}
+        animate={{ width: "100%" }}
+        transition={{ duration: 3.2, ease: "linear" }}
+      />
+    </div>
+  );
 }
 
 // Ticker component
@@ -452,6 +877,8 @@ export default function Home() {
             </a>
           </div>
         </div>
+
+        <StatsSlider />
 
         {/* ── TOP BAR ── */}
         <div className="relative z-50 bg-[#030712] border-b border-white/[0.06] py-2 px-4">
@@ -704,7 +1131,7 @@ export default function Home() {
                     {/* Subtle mesh */}
                     <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "radial-gradient(circle at 1.5px 1.5px,rgba(255,255,255,0.18) 1px,transparent 0)", backgroundSize: "20px 20px" }} />
                     {/* Service-specific illustration */}
-                    <ServicePosterVisual tag={s.tag} accent={s.accent} />
+                    <ServicePosterVisual title={s.title} accent={s.accent} />
                     {/* Category badge */}
                     <div className="absolute top-3 left-3 z-10">
                       <span className={`text-[10px] font-bold uppercase tracking-[0.12em] px-2.5 py-1 rounded-full border backdrop-blur-sm ${s.tagColor}`}>
