@@ -205,7 +205,7 @@ export default function Home() {
         </div>
 
         {/* ── PRO ANNOUNCEMENT BANNER ── */}
-        <div className="relative z-50 overflow-hidden" style={{ background: "linear-gradient(90deg,#0f1f5c,#1a56db,#2563eb,#1a56db,#0f1f5c)" }}>
+        <div className="relative z-50 overflow-hidden" style={{ background: "linear-gradient(90deg,#020810,#0a1628,#0f2040,#1a3a6e,#1a56db,#1a3a6e,#0f2040,#0a1628,#020810)" }}>
           {/* Shimmer overlay */}
           <motion.div
             className="absolute inset-0 pointer-events-none"
@@ -906,23 +906,23 @@ export default function Home() {
         {/* ── FLOATING WHATSAPP BUBBLE ── */}
         <motion.div
           className="fixed bottom-8 right-6 z-50"
-          animate={{ y: [0, -10, 0] }}
-          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+          animate={{ y: [0, -7, 0] }}
+          transition={{ duration: 4, repeat: Infinity, ease: [0.45, 0, 0.55, 1] }}
         >
           <div className="relative group">
-            {/* Ring 1 */}
+            {/* Ring 1 — starts transparent so loop reset is invisible */}
             <motion.span
               className="absolute inset-0 rounded-full pointer-events-none"
               style={{ background: "#25d366" }}
-              animate={{ scale: [1, 2.4], opacity: [0.5, 0] }}
-              transition={{ duration: 2, repeat: Infinity, ease: "easeOut" }}
+              animate={{ scale: [1, 2.2], opacity: [0, 0.3, 0] }}
+              transition={{ duration: 2.8, repeat: Infinity, ease: "easeOut", times: [0, 0.3, 1] }}
             />
-            {/* Ring 2 — delayed */}
+            {/* Ring 2 — staggered */}
             <motion.span
               className="absolute inset-0 rounded-full pointer-events-none"
               style={{ background: "#25d366" }}
-              animate={{ scale: [1, 2.4], opacity: [0.4, 0] }}
-              transition={{ duration: 2, repeat: Infinity, ease: "easeOut", delay: 0.9 }}
+              animate={{ scale: [1, 2.2], opacity: [0, 0.25, 0] }}
+              transition={{ duration: 2.8, repeat: Infinity, ease: "easeOut", delay: 1.4, times: [0, 0.3, 1] }}
             />
 
             {/* The green circle button */}
