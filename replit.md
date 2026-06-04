@@ -1,6 +1,6 @@
-# Alice Solution Co
+# SpikeBis
 
-A premium, futuristic single-page website for Alice Solution Co — a modern international IT company and digital solutions agency.
+A premium, futuristic single-page website for SpikeBis — a modern international IT company and digital solutions agency.
 
 ## Run & Operate
 

@@ -23,7 +23,7 @@ const fadeInUp = {
 
 const WHATSAPP_NUMBER = "923160401431";
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
-const EMAIL = "info@aicesolutionco.com";
+const EMAIL = "info@spikebis.com";
 
 const COUNTRY_CODES = [
   { code: "+92", flag: "🇵🇰", name: "Pakistan" },
@@ -106,7 +106,7 @@ const projects = [
 ];
 
 const testimonials = [
-  { name: "Sarah Jenkins", company: "TechNova Inc", country: "USA", text: "aiceSolutionCo transformed our digital presence completely. The new website is an absolute masterpiece — and revenue is up 40%.", initials: "SJ", color: "from-blue-600 to-indigo-600" },
+  { name: "Sarah Jenkins", company: "TechNova Inc", country: "USA", text: "SpikeBis transformed our digital presence completely. The new website is an absolute masterpiece — and revenue is up 40%.", initials: "SJ", color: "from-blue-600 to-indigo-600" },
   { name: "Michael Chen", company: "Luxe Retail", country: "UK", text: "Their Shopify expertise doubled our conversion rate in just two months. The ROI has been exceptional. Highly recommended.", initials: "MC", color: "from-emerald-600 to-teal-600" },
   { name: "Elena Rostova", company: "FinEdge", country: "UAE", text: "World-class UI/UX design. Our users engagement is up 180%. They delivered beyond every expectation we had.", initials: "ER", color: "from-violet-600 to-purple-600" },
   { name: "David Miller", company: "Growth Inc", country: "Australia", text: "Precise, effective ad campaigns with real measurable results. True professionals who deliver on every single promise.", initials: "DM", color: "from-amber-600 to-orange-600" },
@@ -645,8 +645,8 @@ function ServicePosterVisual({ title, accent }: { title: string; accent: string 
 
 // Header stats slider
 const HEADER_STATS = [
-  { value: "500+", label: "Projects Completed", icon: <Rocket className="w-5 h-5" />, color: "#3b82f6" },
-  { value: "200+", label: "Growing Businesses", icon: <TrendingUp className="w-5 h-5" />, color: "#10b981" },
+  { value: "740+", label: "Projects Completed", icon: <Rocket className="w-5 h-5" />, color: "#3b82f6" },
+  { value: "650+", label: "Happy Clients",      icon: <TrendingUp className="w-5 h-5" />, color: "#10b981" },
   { value: "30+",  label: "Countries Served",   icon: <Globe className="w-5 h-5" />,   color: "#a855f7" },
   { value: "18+",  label: "Years of Excellence", icon: <Award className="w-5 h-5" />,   color: "#f59e0b" },
   { value: "100%", label: "Satisfaction Rate",   icon: <Star className="w-5 h-5" />,    color: "#ec4899" },
@@ -786,14 +786,13 @@ export default function Home() {
                 <motion.div animate={{ rotate: 360 }} transition={{ duration: 1.1, repeat: Infinity, ease: "linear" }}
                   className="absolute inset-0 rounded-full border-2 border-transparent border-t-primary border-r-primary/50" />
                 <div className="absolute inset-2 rounded-full bg-primary/10 flex items-center justify-center">
-                  <span className="text-primary font-black text-xl">A</span>
+                  <span className="text-primary font-black text-xl">S</span>
                 </div>
               </div>
               <motion.div animate={{ opacity: [0.4, 1, 0.4] }} transition={{ duration: 1.6, repeat: Infinity }}
                 className="flex items-center gap-0.5 text-xl font-bold tracking-tight">
-                <span className="text-white">aice</span>
-                <span className="text-primary">Solution</span>
-                <span className="text-white">Co</span>
+                <span className="text-white">Spike</span>
+                <span className="text-primary">Bis</span>
               </motion.div>
             </div>
           </motion.div>
@@ -911,12 +910,12 @@ export default function Home() {
             <div className="flex items-center gap-2.5 cursor-pointer shrink-0 mr-auto lg:mr-0" onClick={() => scrollTo("home")}>
               <div className="relative w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
                 style={{ background: "linear-gradient(135deg,#1a56db,#3b82f6)", boxShadow: "0 0 20px rgba(59,130,246,0.5)" }}>
-                <span className="text-white font-black text-lg leading-none">A</span>
+                <span className="text-white font-black text-lg leading-none">S</span>
                 <div className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-primary border-2 border-background" />
               </div>
               <div className="leading-none">
                 <div className="text-[17px] font-black tracking-tight">
-                  <span className="text-white">aice</span><span className="text-primary">Solution</span><span className="text-white">Co</span>
+                  <span className="text-white">Spike</span><span className="text-primary">Bis</span>
                 </div>
                 <div className="text-[9px] text-slate-500 tracking-[0.15em] uppercase font-medium mt-0.5">Digital Agency</div>
               </div>
@@ -1042,8 +1041,8 @@ export default function Home() {
               {/* Stats pills */}
               <motion.div variants={fadeInUp} className="flex flex-wrap items-center justify-center gap-3">
                 {[
-                  { value: "500+", label: "Projects Completed" },
-                  { value: "200+", label: "Happy Clients" },
+                  { value: "740+", label: "Projects Completed" },
+                  { value: "650+", label: "Happy Clients" },
                   { value: "18+", label: "Years Experience" },
                   { value: "30+", label: "Countries Served" },
                 ].map((s, i) => (
@@ -1067,13 +1066,13 @@ export default function Home() {
               className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <motion.div variants={fadeInUp}>
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
-                  <Award className="w-4 h-4" /> About aiceSolutionCo
+                  <Award className="w-4 h-4" /> About SpikeBis
                 </div>
                 <h2 className="text-3xl md:text-5xl font-black text-white mb-6 leading-tight">
                   Pioneering the Future of <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-400">Digital Business</span>
                 </h2>
                 <p className="text-slate-400 text-lg mb-5 leading-relaxed">
-                  <strong className="text-white">aiceSolutionCo</strong> is a premium worldwide digital transformation agency. With 18+ years of experience, we engineer immersive, high-performance digital solutions across every channel.
+                  <strong className="text-white">SpikeBis</strong> is a premium worldwide digital transformation agency. With 18+ years of experience, we engineer immersive, high-performance digital solutions across every channel.
                 </p>
                 <p className="text-slate-400 text-lg mb-8 leading-relaxed">
                   From Shopify development to global ad campaigns and AI automation — we handle the complex technology so you can focus entirely on growth.
@@ -1091,8 +1090,8 @@ export default function Home() {
 
               <motion.div variants={fadeInUp} className="grid grid-cols-2 gap-4">
                 {[
-                  { label: "Projects Delivered", value: "500+", icon: <Rocket className="w-5 h-5" /> },
-                  { label: "Happy Clients", value: "200+", icon: <Users className="w-5 h-5" /> },
+                  { label: "Projects Delivered", value: "740+", icon: <Rocket className="w-5 h-5" /> },
+                  { label: "Happy Clients", value: "650+", icon: <Users className="w-5 h-5" /> },
                   { label: "Years Experience", value: "18+", icon: <Award className="w-5 h-5" /> },
                   { label: "Countries Served", value: "30+", icon: <Globe className="w-5 h-5" /> },
                 ].map((stat, i) => (
@@ -1175,7 +1174,7 @@ export default function Home() {
                 <Shield className="w-4 h-4" /> Our Advantages
               </div>
               <h2 className="text-4xl md:text-5xl font-black text-white mb-5">Why Choose Us</h2>
-              <p className="text-slate-400 text-lg">The pillars that make aiceSolutionCo the agency of choice for 200+ global brands.</p>
+              <p className="text-slate-400 text-lg">The pillars that make SpikeBis the agency of choice for 650+ global brands.</p>
             </div>
             <motion.div initial="hidden" whileInView="show" viewport={{ once: true, margin: "-80px" }} variants={staggerContainer}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -1469,10 +1468,10 @@ export default function Home() {
                 <div className="flex items-center gap-2.5 mb-5">
                   <div className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0"
                     style={{ background: "linear-gradient(135deg,#1a56db,#3b82f6)", boxShadow: "0 0 16px rgba(59,130,246,0.45)" }}>
-                    <span className="text-white font-black text-base">A</span>
+                    <span className="text-white font-black text-base">S</span>
                   </div>
                   <span className="text-[17px] font-black tracking-tight">
-                    <span className="text-white">aice</span><span className="text-primary">Solution</span><span className="text-white">Co</span>
+                    <span className="text-white">Spike</span><span className="text-primary">Bis</span>
                   </span>
                 </div>
                 <p className="text-slate-500 text-sm max-w-xs mb-5 leading-relaxed">Premium worldwide digital transformation agency. 18+ years of excellence in IT, e-commerce, marketing, and AI.</p>
@@ -1503,7 +1502,7 @@ export default function Home() {
               </div>
             </div>
             <div className="pt-8 border-t border-white/[0.05] flex flex-col md:flex-row justify-between items-center gap-4">
-              <p className="text-slate-600 text-xs">&copy; {new Date().getFullYear()} aiceSolutionCo. All rights reserved. Worldwide Digital Agency.</p>
+              <p className="text-slate-600 text-xs">&copy; {new Date().getFullYear()} SpikeBis. All rights reserved. Worldwide Digital Agency.</p>
               <div className="flex gap-2">
                 {[Facebook, Instagram, Twitter, Linkedin].map((Icon, i) => (
                   <a key={i} href="#" className="w-8 h-8 rounded-full border border-white/8 bg-white/[0.03] flex items-center justify-center text-slate-500 hover:text-white hover:border-primary/40 transition-all">
