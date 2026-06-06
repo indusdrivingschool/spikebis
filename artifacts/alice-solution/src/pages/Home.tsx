@@ -18,8 +18,8 @@ const staggerContainer = {
 };
 const fadeInUp = {
   hidden: { opacity: 0, y: 28 },
-  // ✅ After
-show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" as const } },
+  show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" as const } },
+};
 
 const WHATSAPP_NUMBER = "923160401431";
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
