@@ -18,8 +18,8 @@ const staggerContainer = {
 };
 const fadeInUp = {
   hidden: { opacity: 0, y: 28 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
-};
+  // ✅ After
+show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" as const } },
 
 const WHATSAPP_NUMBER = "923160401431";
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
@@ -718,7 +718,8 @@ function StatsSlider() {
         style={{ background: stat.color }}
         initial={{ width: "0%" }}
         animate={{ width: "100%" }}
-        transition={{ duration: 3.2, ease: "linear" }}
+        // ✅ After
+transition={{ duration: 3.2, ease: "linear" as const }}
       />
     </div>
   );
