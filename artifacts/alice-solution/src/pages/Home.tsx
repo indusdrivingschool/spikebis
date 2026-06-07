@@ -718,8 +718,7 @@ function StatsSlider() {
         style={{ background: stat.color }}
         initial={{ width: "0%" }}
         animate={{ width: "100%" }}
-        // ✅ After
-transition={{ duration: 3.2, ease: "linear" as const }}
+        transition={{ duration: 3.2, ease: "linear" as const }}
       />
     </div>
   );
